@@ -3,7 +3,7 @@ import "bootstrap/dist/js/bootstrap.bundle.js";
 import Home from "./pages/Home";
 
 const App = () => {
-  return <Home/>;
+  return <div><Home/></div>;
 };
 
 export default App;
