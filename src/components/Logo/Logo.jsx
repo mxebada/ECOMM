@@ -2,7 +2,6 @@ import React from "react";
 
 const Logo = () => {
   return (
-    <div>
       <div
         className="rounded-4 d-flex justify-content-center align-items-center"
         style={{ width: "46px", height: "46px", backgroundColor: "#40BFFF" }}
@@ -12,6 +11,7 @@ const Logo = () => {
           style={{
             width: "22px",
             height: "22px",
+            transform:"rotate(45deg)"
           }}
         >
           <div
@@ -24,7 +24,6 @@ const Logo = () => {
           ></div>
         </div>
       </div>
-    </div>
   );
 };
 
