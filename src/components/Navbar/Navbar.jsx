@@ -1,7 +1,5 @@
 import React from 'react'
 import Logo from "../Logo/Logo"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = () => {
   return (
@@ -92,7 +90,6 @@ const Navbar = () => {
             <div>
               <h1>5</h1>
             </div>
-            <FontAwesomeIcon icon={faMagnifyingGlass} />
           </div>
         </div>
   )
