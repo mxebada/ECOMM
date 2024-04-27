@@ -1,0 +1,29 @@
+.img {
+  background: url(./assets/bg1.png),
+    linear-gradient(180deg, #000000 -73.06%, rgba(0, 0, 0, 0) 100%);
+  mix-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  display: flex;
+  align-items: center;
+}
+.content {
+  color: white;
+  font-size: 64px;
+  border-radius: 10px;
+  font-weight: 700;
+  margin-left: 110px;
+}
+.hot-seal{
+    height: 356px;
+color: aliceblue;
+margin-top: -178px;
+background-color: white;
+}
+.img1{
+    background: url(https://www.pngarts.com/files/3/Adidas-Running-Shoes-PNG-Image.png),
+    linear-gradient(180deg, #000000 -73.06%, rgba(0, 0, 0, 0) 100%);
+  mix-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
