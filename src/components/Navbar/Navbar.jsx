@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../Logo/Logo";
 import { GrCart } from "react-icons/gr";
 import { FaSearch, FaRegUser } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -65,12 +66,13 @@ const Navbar = () => {
 
       <div className="col-2 d-flex mt-2 flex-column align-items-center">
         <Logo />
-        <h3
-          className="mt-1 mx-3"
+        <Link
+          to="/"
+          className="mt-1 mx-3 text-decoration-none"
           style={{ color: "#22262A", fontWeight: "700", fontSize: "16px" }}
         >
           E-Comm
-        </h3>
+        </Link>
       </div>
 
       <div className="col-5 d-flex align-items-center justify-content-end">

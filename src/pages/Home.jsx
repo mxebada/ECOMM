@@ -1,17 +1,43 @@
-import React from "react";
-import Navbar from "../components/Navbar/Navbar"
-import HotSeal from "../components/Seals/HotSeal";
+import React, { useState } from "react";
+import OfferBanner from "../components/Seals/OfferBanner";
+import { PRODUCTS } from "../data/products";
+import BestSeller from "../components/Seals/BestSeller";
+import DisplayProduct from "../components/Products/DisplayProduct";
+import AdidasMen from "../components/Adidas/AdidasMen";
+import FreeShipp from "../components/Adidas/FreeShip";
+import LatestNews from "../components/Adidas/LatestNews";
+import FeaturedProducts from "../components/Adidas/FeaturedProducts";
+import Search from "../components/Search/Search";
 const Home = () => {
+  const [visibleProducts, setVisibleProducts] = useState(8);
+  const [activeFilter, setActiveFilter] = useState("All");
+
+  const filteredProducts =
+    activeFilter === "All"
+      ? PRODUCTS
+      : PRODUCTS.filter((item) => item.category === activeFilter);
+
+  const loadMoreProducts = () => {
+    setVisibleProducts((prevVisibleProducts) => prevVisibleProducts + 4);
+  };
+
+  const filterProducts = (category) => {
+    setActiveFilter(category);
+  };
   return (
     <div>
-      <Navbar/>
-      <div className="col-12 img" style={{ height: "100vh" }}>
-      <div class="content">
-      <p>Super Flash Sale</p>
-      <p>50% Off</p>
-    </div>
-      </div>
-    <HotSeal className="hot-seal"/>
+      <OfferBanner />
+      <BestSeller filterProducts={filterProducts} activeFilter={activeFilter} />
+      <DisplayProduct
+        filteredProducts={filteredProducts}
+        visibleProducts={visibleProducts}
+        loadMoreProducts={loadMoreProducts}
+      />
+      <AdidasMen />
+      <FreeShipp />
+      <LatestNews/>
+      <FeaturedProducts/>
+      <Search/>
     </div>
   );
 };
