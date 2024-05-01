@@ -1,11 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
-import w from "../../assets/Western-union.png";
-import pay from "../../assets/Paypal.png";
 import m from "../../assets/m1.png";
 import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
-import Logo from "../Logo/Logo";
 import LogoFooter from "../Logo/LogoFooter";
 import { SiWesternunion } from "react-icons/si";
 import { RiVisaLine } from "react-icons/ri";
@@ -109,8 +106,55 @@ const Footer = () => {
                 <SiWesternunion />
               </p>
             </div>
-            <img src={m} width={48} height={34} alt="" />
-            {/* <img src={pay} width={48} height={34} alt="" /> */}
+            {/* <img src={m} width={48} height={34} alt="" /> */}
+            <div
+              className="rounded"
+              style={{
+                fontSize: "11px",
+                width: "48px",
+                height: "34px",
+                backgroundColor: "#5870BE",
+                padding: "9.5px 3px",
+                color: "#FFFFFF",
+                position: "relative",
+              }}
+            >
+              <div
+                style={{
+                  width: "22px",
+                  height: "22px",
+                  backgroundColor: "#E63737",
+                  borderRadius: "50%",
+                  position: "absolute",
+                  top: "6.5px",
+                  left: "4px",
+                  zIndex: "5",
+                }}
+              >
+                <span
+                  className="master d-block"
+                  style={{
+                    fontWeight: "300",
+                    fontSize: "6px",
+                    marginTop: "6px",
+                    marginLeft: "1px",
+                  }}
+                >
+                  MasterCard
+                </span>
+              </div>
+              <div
+                style={{
+                  width: "22px",
+                  height: "22px",
+                  backgroundColor: "#FFAF38",
+                  borderRadius: "50%",
+                  position: "absolute",
+                  top: "6.5px",
+                  left: "21px",
+                }}
+              ></div>
+            </div>
             <div
               className="rounded fw-bold"
               style={{

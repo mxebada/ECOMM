@@ -18,17 +18,17 @@ const Product = (props) => {
         <div
           className="active-none"
           style={{
-            width: "63px",
-            height: "33px",
+            width: "43px",
+            height: "27px",
             backgroundColor: "#FF4858",
             position: "absolute",
             top: "0",
             left: "0",
-            borderRadius: "5px",
+            borderRadius: "8px",
             color: "white",
           }}
         >
-          <h5 style={{ fontWeight: "300", lineHeight: "34px" }}>HOT</h5>
+          <h6 style={{ fontWeight: "300", lineHeight: "28px" }}>HOT</h6>
         </div>
         <div className="overlay mt-2 rounded-4 col-12 pt-5 pb-4">
           <div className="d-flex justify-content-around m-auto p-5 col-12">

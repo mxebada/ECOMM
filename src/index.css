@@ -152,17 +152,21 @@
 .splash{
   transform: rotate(45deg);
 }
+.master{
+  transform: rotate(7deg);
+}
 .check-out{
   font-weight: 500;
   background-color: #40BFFF;
   color: white;
   border: 1px solid #40BFFF;
-
+  transition: 0.9s;
 }
 .check-out:hover{
   background-color: white;
   color: #40BFFF;
   border: 1px solid #40BFFF;
+  transition: 0.9s;
 }
 .bg-inp{
   background-color: rgba(223, 222, 222, 0.5);
