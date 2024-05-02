@@ -64,16 +64,14 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="col-2 d-flex mt-2 flex-column align-items-center">
+      <Link
+        to="/"
+        className="mt-3 mx-3 text-decoration-none d-flex flex-column align-items-center"
+        style={{ color: "#22262A", fontWeight: "700", fontSize: "16px" }}
+      >
         <Logo />
-        <Link
-          to="/"
-          className="mt-1 mx-3 text-decoration-none"
-          style={{ color: "#22262A", fontWeight: "700", fontSize: "16px" }}
-        >
-          E-Comm
-        </Link>
-      </div>
+        E-Comm
+      </Link>
 
       <div className="col-5 d-flex align-items-center justify-content-end">
         {/* <ul
@@ -98,7 +96,10 @@ const Navbar = () => {
             My profile
           </span>
         </h5>
-        <div className="col-1 position-relative" style={{ height: "40px" }}>
+        <div
+          className="col-1 mt-2 position-relative"
+          style={{ height: "40px" }}
+        >
           <span
             className="d-block position-absolute rounded-circle text-center text-white"
             style={{

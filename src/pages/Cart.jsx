@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ProductInCart from "../components/Products/ProductInCart";
-import { PRODUCTS } from "../data/Products";
 import PaymentOne from "../components/Payments/PaymentOne";
+import { PRODUCTS } from "../data/products";
 // import { ShopContext } from "../context/shop-context";
 // import PaymentOne from "../components/Payments/PaymentOne";
 

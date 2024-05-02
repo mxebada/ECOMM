@@ -45,7 +45,7 @@ const Product = (props) => {
             </button>
           </div>
         </div>
-        <Link to="/" className="text-decoration-none">
+        <Link to={`/product/${props.id}`} className="text-decoration-none">
           <h2 className="fs-4 mt-2 py-2 h41">{props.title}</h2>
         </Link>
         <div className="d-flex text-warning col-7 m-auto pt-2">
