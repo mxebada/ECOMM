@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Product = (props) => {
   return (
-    <div className="col-10 m-auto col-md-5 col-xl-4 col-xxl-3 my-3">
+    <div>
       <div className="col-11 m-auto text-center pb-3 mt-4 section3-content-div">
         <img
           src={props.image}

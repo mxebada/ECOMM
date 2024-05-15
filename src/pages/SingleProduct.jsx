@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { PRODUCTS } from "../data/products";
 import {
@@ -9,10 +9,20 @@ import {
   FaFacebookF,
 } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
+import Product from "../components/Products/Product";
+import img from "../assets/P.png";
 const SingleProduct = () => {
   const location = useLocation();
   const id = location.pathname.split("/")[2];
   const getProduct = PRODUCTS[id - 1];
+  const getProductCat = PRODUCTS.filter(
+    (product) => product.category === getProduct.category
+  );
+  const [activeTab, setActiveTab] = useState("productInfomation");
+
+  const changeTap = (key) => {
+    setActiveTab(key);
+  };
 
   return (
     <div>
@@ -40,7 +50,7 @@ const SingleProduct = () => {
           </span>
           <li>
             <Link
-              to="/cart"
+              to="/hotdeal"
               className="text-decoration-none"
               style={{ color: "#33A0FF" }}
             >
@@ -52,7 +62,7 @@ const SingleProduct = () => {
           </span>
           <li>
             <Link
-              to="/cart"
+              to="/"
               className="text-decoration-none"
               style={{ color: "#262626" }}
             >
@@ -64,7 +74,10 @@ const SingleProduct = () => {
 
       <div className="col-10 m-auto my-5 d-flex">
         <div className="col-9 py-5 d-flex justify-content-between">
-          <div className="col-5">
+          <div
+            className="col-5  d-flex flex-column justify-content-between"
+            style={{ height: "515px" }}
+          >
             {" "}
             <img
               src={getProduct.image}
@@ -72,6 +85,25 @@ const SingleProduct = () => {
               className="col-12 p-5 rounded"
               alt={getProduct.title}
             />
+            <div
+              style={{ overflowX: "auto", whiteSpace: "nowrap" }}
+              className="col-12 d-flex justify-content-between"
+            >
+              {getProductCat.map((item) => (
+                <Link
+                  style={{ height: "90px" }}
+                  className="col-3 me-3 mb-1"
+                  to={`/product/${item.id}`}
+                >
+                  <img
+                    src={item.image}
+                    style={{ backgroundColor: "#E5E8EA", height: "100%" }}
+                    className="col-12 p-3 rounded"
+                    alt={getProduct.title}
+                  />
+                </Link>
+              ))}
+            </div>
           </div>
           <div className="col-7 px-5">
             <h1 style={{ color: "#22262A", fontWeight: "500" }}>
@@ -125,7 +157,7 @@ const SingleProduct = () => {
               }}
             ></div>
             <div className="col-7 mt-2">
-              <div className="col-12 d-flex justify-content-between">
+              {/* <div className="col-12 d-flex justify-content-between">
                 <p className="fs-6">Select Color:</p>{" "}
                 <div className="col-6 d-flex">
                   <div
@@ -161,7 +193,7 @@ const SingleProduct = () => {
                     }}
                   ></div>
                 </div>
-              </div>
+              </div> */}
               <div className="col-12 d-flex justify-content-between">
                 <p className="fs-6 mt-1">Size:</p>{" "}
                 <select
@@ -236,7 +268,7 @@ const SingleProduct = () => {
             <div className="col-12 d-flex">
               <div className="col-6 pe-2">
                 <button
-                  className="col-12 border-0 px-3 py-3"
+                  className="col-12 border-0 rounded px-3 py-3"
                   style={{ color: "#fff", backgroundColor: "#385C8E" }}
                 >
                   <FaFacebookF className="fw-bold fs-4 me-1" />
@@ -245,7 +277,7 @@ const SingleProduct = () => {
               </div>
               <div className="col-6 ps-2">
                 <button
-                  className="col-12 border-0 px-3 py-3"
+                  className="col-12 border-0 rounded px-3 py-3"
                   style={{ color: "#fff", backgroundColor: "#03A9F4" }}
                 >
                   <FaTwitter className="fw-bold fs-4 me-1" />
@@ -255,7 +287,165 @@ const SingleProduct = () => {
             </div>
           </div>
         </div>
-        <div className="col-3 bg-black"></div>
+        <div className="col-3">
+          <h6
+            style={{ color: "#C1C8CE", marginLeft: "12px", marginTop: "46px" }}
+          >
+            BEST SELLER
+          </h6>
+          <Product
+            title="Nike Air Max"
+            image="https://www.pngarts.com/files/3/Nike-Running-Shoes-PNG-Image-with-Transparent-Background.png"
+            price="350"
+            offer="25% off"
+            oldPrice="500.00"
+          />
+        </div>
+      </div>
+
+      <div className="col-10 m-auto my-3 d-flex">
+        <div className="col-9" style={{ backgroundColor: "#FAFAFB" }}>
+          <div className="col-12">
+            <ul
+              className="col-11 col-sm-9 col-md-8 fs-5 d-flex justify-content-between text-center mt-4"
+              style={{ fontWeight: "600" }}
+            >
+              <a
+                href="#tab-1"
+                className="text-decoration-none"
+                style={{ color: "#262626" }}
+              >
+                <li
+                  className={
+                    activeTab === "productInfomation" ? "active-2" : ""
+                  }
+                  style={{ listStyle: "none", cursor: "pointer" }}
+                  onClick={() => changeTap("productInfomation")}
+                >
+                  Product Infomation
+                </li>
+              </a>
+              <a
+                href="#tab-2"
+                className="text-decoration-none"
+                style={{ color: "#262626" }}
+              >
+                <li
+                  className={activeTab === "reviews" ? "active-2" : ""}
+                  style={{ listStyle: "none", cursor: "pointer" }}
+                  onClick={() => changeTap("reviews")}
+                >
+                  Reviews <span>0</span>
+                </li>
+              </a>
+              <a
+                href="#tab-3"
+                className="text-decoration-none"
+                style={{ color: "#262626" }}
+              >
+                <li
+                  className={activeTab === "anotherTab" ? "active-2" : ""}
+                  style={{ listStyle: "none", cursor: "pointer" }}
+                  onClick={() => changeTap("anotherTab")}
+                >
+                  Another tab
+                </li>
+              </a>
+            </ul>
+            <div className="col-12 line-tab"></div>
+            <div className="col-12 d-flex overflow-hidden">
+              <div className="col-12" id="tab-1">
+                <p className="tab-p col-8">
+                  air max are always very comfortable fit, clean and just
+                  perfect in every way. just the box was too small and scrunched
+                  the sneakers up a little bit, not sure if the box was always
+                  this small but the 90s are and will always be one of my
+                  favorites.
+                </p>
+                <p className="tab-p col-8">
+                  air max are always very comfortable fit, clean and just
+                  perfect in every way. just the box was too small and scrunched
+                  the sneakers up a little bit, not sure if the box was always
+                  this small but the 90s are and will always be one of my
+                  favorites.
+                </p>
+                <p className="tab-p col-8">
+                  air max are always very comfortable fit, clean and just
+                  perfect in every way. just the box was too small and scrunched
+                  the sneakers up a little bit, not sure if the box was always
+                  this small but the 90s are and will always be one of my
+                  favorites.
+                </p>
+              </div>
+              <div className="col-12" id="tab-2">
+                <div className="mb-5">
+                  <div className="d-flex ms-4">
+                    <img
+                      src={img}
+                      className="rounded-circle ms-3"
+                      width={80}
+                      height={80}
+                      alt=""
+                    />
+                    <div>
+                      {" "}
+                      <h2 className="ms-4">Mohamed Ebada </h2>
+                      <div className="d-flex text-warning col-7 ms-3 pt-2">
+                        <FaStar className="ms-2" />
+                        <FaStar className="ms-3" />
+                        <FaStar className="ms-3" />
+                        <FaStar className="ms-3" />
+                        <FaStar className="ms-3" />
+                      </div>
+                    </div>
+                  </div>
+                  <h3 className="rev-1">
+                    air max are always very comfortable fit, clean and just
+                    perfect in every way. just the box was too small and
+                    scrunched the sneakers up a little bit, not sure if the box
+                    was always this small but the 90s are and will always be one
+                    of my favorites.
+                  </h3>
+                  <span className="date-rev">December 10, 2016</span>
+                </div>
+
+                <div className="mb-5">
+                  <div className="d-flex ms-4">
+                    <img
+                      src={img}
+                      className="rounded-circle ms-3"
+                      width={80}
+                      height={80}
+                      alt=""
+                    />
+                    <div>
+                      {" "}
+                      <h2 className="ms-4">Mohamed Ebada </h2>
+                      <div className="d-flex text-warning col-7 ms-3 pt-2">
+                        <FaStar className="ms-2" />
+                        <FaStar className="ms-3" />
+                        <FaStar className="ms-3" />
+                        <FaStar className="ms-3" />
+                        <FaStar className="ms-3" />
+                      </div>
+                    </div>
+                  </div>
+                  <h3 className="rev-1">
+                    air max are always very comfortable fit, clean and just
+                    perfect in every way. just the box was too small and
+                    scrunched the sneakers up a little bit, not sure if the box
+                    was always this small but the 90s are and will always be one
+                    of my favorites.
+                  </h3>
+                  <span className="date-rev">December 10, 2016</span>
+                </div>
+              </div>
+              <div className="col-12" id="tab-3">
+                jjjjjjjj
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

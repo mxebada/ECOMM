@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import SingleProduct from "./pages/SingleProduct";
+import HotDeal from "./pages/HotDeal";
 
 const App = () => {
   const user = false;
@@ -26,7 +27,9 @@ const App = () => {
         )}
         <Route path="/register" element={<Register />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/product/:id" element={<SingleProduct/>} />
+        <Route path="/product/:id" element={<SingleProduct />} />
+        <Route path="/hotdeal" element={<HotDeal />} />
+
         <Route path="*" element={<Home />} />
       </Routes>
       <Footer />

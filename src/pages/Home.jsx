@@ -33,7 +33,9 @@ const Home = () => {
         visibleProducts={visibleProducts}
         loadMoreProducts={loadMoreProducts}
       />
-      <AdidasMen />
+      <div className="col-12" style={{ backgroundColor: "#40BFFF" }}>
+    <AdidasMen/>
+</div>
       <FreeShipp />
       <LatestNews/>
       <FeaturedProducts/>

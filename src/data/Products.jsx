@@ -11,7 +11,7 @@ export const PRODUCTS = [
   },
   {
     id: 2,
-    title: "Nike Air Max",
+    title: "Nike Air blue",
     price: 129,
     offer: "25% off",
     oldPrice: 210,
@@ -120,7 +120,7 @@ export const PRODUCTS = [
   },
   {
     id: 13,
-    title: "Women Blue Bag",
+    title: "Women Brown Bag",
     price: 200,
     offer: "25% off",
     oldPrice: 534,
@@ -157,7 +157,7 @@ export const PRODUCTS = [
   },
   {
     id: 17,
-    title: "Nike Air Max",
+    title: "Adidas Air Max",
     price: 129,
     offer: "25% off",
     oldPrice: 210,
@@ -512,7 +512,7 @@ export const PRODUCTS = [
   },
   {
     id: 54,
-    title: "Adidas Running Shoes Transparent",
+    title: "Adidas Running Shoes",
     price: 129,
     offer: "25% off",
     oldPrice: 210,
