@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import AdidasMen from "../components/Adidas/AdidasMen";
 import FilterCats from "../components/Seals/FilterCats";
 import PriceRange from "../components/Seals/PriceRange";
+import Bar from "../components/Bar/Bar";
+import DisplayProduct from "../components/Products/DisplayProduct";
+import { PRODUCTS } from "../data/products";
 
 const HotDeal = () => {
+
+    const [visibleProducts, setVisibleProducts] = useState(8);
+  const [activeFilter, setActiveFilter] = useState("All");
+
+  const filteredProducts =
+    activeFilter === "All"
+      ? PRODUCTS
+      : PRODUCTS.filter((item) => item.category === activeFilter);
+
+  const loadMoreProducts = () => {
+    setVisibleProducts((prevVisibleProducts) => prevVisibleProducts + 4);
+  };
+
+  const filterProducts = (category) => {
+    setActiveFilter(category);
+  };
   return (
     <div>
       <div
@@ -49,10 +68,19 @@ const HotDeal = () => {
           <br/>
           <FilterCats />
         </div>
-        <div className="col-9">
-          <div className="col-12 py-5 ps-5">
+        <div className="col-9 ps-5">
+          <div className="col-12 pt-5 ">
             <AdidasMen />
-            
+          </div>
+          <div className="col-12 mt-4" style={{backgroundColor:"#F1F3F4"}}>
+            <Bar/>
+          </div>
+          <div className="col-12 d-flex justify-content-between flex-wrap mt-4">
+          <DisplayProduct
+        filteredProducts={filteredProducts}
+        visibleProducts={visibleProducts}
+        loadMoreProducts={loadMoreProducts}
+      />
           </div>
         </div>
       </div>
