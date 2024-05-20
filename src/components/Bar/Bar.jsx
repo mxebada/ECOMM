@@ -2,7 +2,7 @@ import React from "react";
 import { HiSquares2X2 } from "react-icons/hi2";
 import { PiListLight } from "react-icons/pi";
 
-const Bar = () => {
+const Bar = (props) => {
   return (
     <div className="col-12 px-3 py-1 d-flex justify-content-between align-items-center">
       <h6 className="col-1 mt-2">
@@ -37,11 +37,11 @@ const Bar = () => {
         </select>
       </div>
       <div className="col-5 d-flex justify-content-end">
-        <h3 style={{ color: "#40BFFF", cursor: "pointer" }}>
+        <h3 onClick={props.ChangeProducts} className={props.activeTable === "squ" ? "active-3" : ""} style={{ cursor: "pointer" }}>
           {" "}
           <HiSquares2X2 />
         </h3>
-        <h3 className=" ms-2" style={{ cursor: "pointer" }}>
+        <h3 onClick={props.ChangeProducts} className={props.activeTable === "list" ? "active-3" : ""} style={{ cursor: "pointer",marginLeft:"10px" }}>
           {" "}
           <PiListLight />
         </h3>

@@ -6,7 +6,7 @@ const DisplayProduct = (props) => {
     <div className="mb-5 pb-3">
       <div className="container d-flex justify-content-between flex-wrap mb-5">
         {props.filteredProducts.slice(0, props.visibleProducts).map((item) => (
-          <div className="col-10 m-auto col-md-5 col-xl-4 col-xxl-4 my-3">
+          <div className="col-10 m-auto col-md-5 col-xl-4 col-xxl-3 my-3">
             <Product
               id={item.id}
               title={item.title}

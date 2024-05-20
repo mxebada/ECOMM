@@ -8,6 +8,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/3/Clutch-Bag-PNG-High-Quality-Image.png",
     category: "Bags",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/3/Women-Running-Shoes-PNG-Background-Image.png",
     category: "sneakers",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/3/Leather-Belt-PNG-Image-Transparent.png",
     category: "Belts",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 4,
@@ -38,6 +41,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/4/Maui-Jim-Sunglasses-PNG-Picture.png",
     category: "sunglasses",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 5,
@@ -48,6 +52,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/3/Adidas-Running-Shoes-Transparent-Image.png",
     category: "sneakers",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 6,
@@ -58,6 +63,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/4/Women-Bag-Transparent-Background-PNG.png",
     category: "Bags",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 7,
@@ -68,6 +74,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/4/Tom-Ford-Sunglasses-PNG-Image-Background.png",
     category: "sunglasses",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 8,
@@ -78,6 +85,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/3/Belt-Download-Transparent-PNG-Image.png",
     category: "Belts",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 9,
@@ -88,6 +96,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/3/Women-Running-Shoes-PNG-Free-Download.png",
     category: "sneakers",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 10,
@@ -97,6 +106,7 @@ export const PRODUCTS = [
     oldPrice: 250,
     image: "https://www.pngarts.com/files/4/Women-Bag-PNG-Free-Download.png",
     category: "Bags",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 11,
@@ -107,6 +117,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/3/Gym-Shoes-Transparent-Background-PNG.png",
     category: "sneakers",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 12,
@@ -117,6 +128,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/4/Ray-Ban-Sunglasses-Free-PNG-Image.png",
     category: "sunglasses",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 13,
@@ -126,6 +138,7 @@ export const PRODUCTS = [
     oldPrice: 534,
     image: "https://www.pngarts.com/files/4/Women-Bag-Transparent.png",
     category: "Bags",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 14,
@@ -136,6 +149,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/3/Running-Shoes-PNG-Background-Image.png",
     category: "sneakers",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 15,
@@ -145,6 +159,7 @@ export const PRODUCTS = [
     oldPrice: 175,
     image: "https://www.pngarts.com/files/3/Belt-Download-PNG-Image.png",
     category: "Belts",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 16,
@@ -154,6 +169,7 @@ export const PRODUCTS = [
     oldPrice: 330,
     image: "https://www.pngarts.com/files/4/Dior-Bag-Transparent-Image.png",
     category: "Bags",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 17,
@@ -163,6 +179,7 @@ export const PRODUCTS = [
     oldPrice: 210,
     image: "https://www.pngarts.com/files/2/Shoes-Download-PNG-Image.png",
     category: "sneakers",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 18,
@@ -173,6 +190,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/3/Sunglasses-For-Women-PNG-Image-Transparent.png",
     category: "sunglasses",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 19,
@@ -183,6 +201,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/3/Women-Running-Shoes-PNG-Image-Transparent.png",
     category: "sneakers",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 20,
@@ -192,6 +211,7 @@ export const PRODUCTS = [
     oldPrice: 400,
     image: "https://www.pngarts.com/files/4/Dior-Bag-PNG-Background-Image.png",
     category: "Bags",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 21,
@@ -202,6 +222,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/1/Women-Casual-Shoes-PNG-Transparent-Image.png",
     category: "sneakers",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 22,
@@ -211,6 +232,7 @@ export const PRODUCTS = [
     oldPrice: 534,
     image: "https://www.pngarts.com/files/3/Leather-Belt-PNG-Picture.png",
     category: "Belts",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 23,
@@ -220,6 +242,7 @@ export const PRODUCTS = [
     oldPrice: 35,
     image: "https://www.pngarts.com/files/3/Nike-Running-Shoes-PNG-Pic.png",
     category: "sneakers",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 24,
@@ -230,6 +253,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/4/Dior-Bag-Transparent-Background-PNG.png",
     category: "Bags",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 25,
@@ -239,6 +263,7 @@ export const PRODUCTS = [
     oldPrice: 534,
     image: "https://www.pngarts.com/files/4/Maui-Jim-Sunglasses-PNG-Pic.png",
     category: "sunglasses",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 26,
@@ -248,6 +273,7 @@ export const PRODUCTS = [
     oldPrice: 250,
     image: "https://www.pngarts.com/files/3/Adidas-Running-Shoes-PNG-Photo.png",
     category: "sneakers",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 27,
@@ -258,6 +284,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/4/Black-Dior-Bag-Transparent-Image.png",
     category: "Bags",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 28,
@@ -268,6 +295,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/2/Shoes-Transparent-Background-PNG.png",
     category: "sneakers",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 29,
@@ -278,6 +306,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/3/Sunglasses-For-Women-Download-Transparent-PNG-Image.png",
     category: "sunglasses",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 30,
@@ -287,6 +316,7 @@ export const PRODUCTS = [
     oldPrice: 377,
     image: "https://www.pngarts.com/files/3/Belt-PNG-Background-Image.png",
     category: "Belts",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 31,
@@ -296,6 +326,7 @@ export const PRODUCTS = [
     oldPrice: 534,
     image: "https://www.pngarts.com/files/3/Jogger-Shoes-PNG-Free-Download.png",
     category: "sneakers",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
 
   {
@@ -306,6 +337,7 @@ export const PRODUCTS = [
     oldPrice: 370,
     image: "https://www.pngarts.com/files/3/Clutch-Bag-Transparent-Images.png",
     category: "Bags",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 33,
@@ -315,6 +347,7 @@ export const PRODUCTS = [
     oldPrice: 534,
     image: "https://www.pngarts.com/files/3/Jogger-Shoes-PNG-Pic.png",
     category: "sneakers",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 34,
@@ -325,6 +358,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/3/Sunglasses-For-Women-PNG-Background-Image.png",
     category: "sunglasses",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
 
   {
@@ -336,6 +370,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/3/Running-Shoes-Transparent-Image.png",
     category: "sneakers",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 36,
@@ -345,6 +380,7 @@ export const PRODUCTS = [
     oldPrice: 534,
     image: "https://www.pngarts.com/files/4/Women-Bag-PNG-Image.png",
     category: "Bags",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 37,
@@ -355,6 +391,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/3/Sunglasses-For-Women-Transparent-Image.png",
     category: "sunglasses",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 38,
@@ -364,6 +401,7 @@ export const PRODUCTS = [
     oldPrice: 534,
     image: "https://www.pngarts.com/files/3/Nike-Running-Shoes-PNG-Photo.png",
     category: "sneakers",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 39,
@@ -374,6 +412,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/3/Leather-Belt-PNG-Download-Image.png",
     category: "Belts",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 40,
@@ -383,6 +422,7 @@ export const PRODUCTS = [
     oldPrice: 300,
     image: "https://www.pngarts.com/files/4/Women-Bag-PNG-Background-Image.png",
     category: "Bags",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 41,
@@ -393,6 +433,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/3/Nike-Running-Shoes-PNG-Free-Download.png",
     category: "sneakers",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 42,
@@ -402,6 +443,7 @@ export const PRODUCTS = [
     oldPrice: 35,
     image: "https://www.pngarts.com/files/4/Women-Bag-PNG-Photo.png",
     category: "Bags",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 43,
@@ -411,6 +453,7 @@ export const PRODUCTS = [
     oldPrice: 534,
     image: "https://www.pngarts.com/files/2/Shoes-PNG-Transparent-Image.png",
     category: "sneakers",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 44,
@@ -421,6 +464,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/4/Maui-Jim-Sunglasses-PNG-High-Quality-Image.png",
     category: "sunglasses",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 45,
@@ -430,6 +474,7 @@ export const PRODUCTS = [
     oldPrice: 370,
     image: "https://www.pngarts.com/files/3/Belt-PNG-Pic.png",
     category: "Belts",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 46,
@@ -440,6 +485,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/3/Nike-Running-Shoes-Free-PNG-Image.png",
     category: "sneakers",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 47,
@@ -449,6 +495,7 @@ export const PRODUCTS = [
     oldPrice: 210,
     image: "https://www.pngarts.com/files/4/Women-Bag-PNG-Picture.png",
     category: "Bags",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 48,
@@ -459,6 +506,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/3/Sunglasses-For-Women-Transparent-Images.png",
     category: "sunglasses",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 49,
@@ -469,6 +517,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/3/Women-Running-Shoes-PNG-High-Quality-Image.png",
     category: "sneakers",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 50,
@@ -479,6 +528,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/4/Women-Bag-PNG-Image-Transparent.png",
     category: "Bags",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 51,
@@ -489,6 +539,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/3/Nike-Running-Shoes-PNG-Image-with-Transparent-Background.png",
     category: "sneakers",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 52,
@@ -499,6 +550,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/3/Leather-Belt-PNG-Transparent-Image.png",
     category: "Belts",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 53,
@@ -509,6 +561,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/4/Women-Bag-PNG-High-Quality-Image.png",
     category: "Bags",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 54,
@@ -519,6 +572,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/3/Adidas-Running-Shoes-Transparent-Background-PNG.png",
     category: "sneakers",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 55,
@@ -529,6 +583,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/4/Ray-Ban-Sunglasses-PNG-Background-Image.png",
     category: "sunglasses",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 56,
@@ -539,6 +594,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/3/Nike-Running-Shoes-Transparent-Background-PNG.png",
     category: "sneakers",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 57,
@@ -549,6 +605,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/4/Women-Bag-PNG-Transparent-Image.png",
     category: "Bags",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 58,
@@ -558,6 +615,7 @@ export const PRODUCTS = [
     oldPrice: 525,
     image: "https://www.pngarts.com/files/3/Belt-Free-PNG-Image.png",
     category: "Belts",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 59,
@@ -568,6 +626,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/2/Gucci-Shoes-For-Women-PNG-Transparent-Image.png",
     category: "sneakers",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 60,
@@ -577,6 +636,7 @@ export const PRODUCTS = [
     oldPrice: 370,
     image: "https://www.pngarts.com/files/4/Dior-Bag-Free-PNG-Image.png",
     category: "Bags",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 61,
@@ -587,6 +647,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/4/Prada-Sunglasses-PNG-Background-Image.png",
     category: "sunglasses",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 62,
@@ -597,6 +658,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/3/Running-Shoes-PNG-Free-Download.png",
     category: "sneakers",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 63,
@@ -606,6 +668,7 @@ export const PRODUCTS = [
     oldPrice: 330,
     image: "https://www.pngarts.com/files/3/Clutch-Bag-PNG-Picture.png",
     category: "Bags",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 64,
@@ -615,6 +678,7 @@ export const PRODUCTS = [
     oldPrice: 330,
     image: "https://www.pngarts.com/files/3/Belt-Transparent.png",
     category: "Belts",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 65,
@@ -625,6 +689,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/3/Adidas-Running-Shoes-PNG-Download-Image.png",
     category: "sneakers",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 66,
@@ -635,6 +700,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/4/Women-Bag-Download-Transparent-PNG-Image.png",
     category: "Bags",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 67,
@@ -645,6 +711,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/3/Sunglasses-For-Women-PNG-High-Quality-Image.png",
     category: "sunglasses",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 68,
@@ -655,6 +722,7 @@ export const PRODUCTS = [
     image:
       "https://www.pngarts.com/files/1/Women-Casual-Shoes-PNG-Image-Background.png",
     category: "sneakers",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
   {
     id: 69,
@@ -664,5 +732,6 @@ export const PRODUCTS = [
     oldPrice: 377,
     image: "https://www.pngarts.com/files/4/Dior-Bag-PNG-Download-Image.png",
     category: "Bags",
+    desc:"Nunc facilisis sagittis ullamcorper.tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ..."
   },
 ];

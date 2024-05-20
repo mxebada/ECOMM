@@ -30,6 +30,7 @@ const Product = (props) => {
         >
           <h6 style={{ fontWeight: "300", lineHeight: "28px" }}>HOT</h6>
         </div>
+        
         <div className="overlay mt-2 rounded-4 col-12 pt-5 pb-4">
           <div className="d-flex justify-content-around m-auto p-5 col-12">
             <button
