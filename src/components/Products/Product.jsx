@@ -7,14 +7,16 @@ import { Link } from "react-router-dom";
 const Product = (props) => {
   return (
     <div>
-      <div className="col-11 m-auto text-center pb-3 mt-4 section3-content-div">
-        <img
-          src={props.image}
-          className="rounded-4 mt-3"
-          width="90%"
-          height="190"
-          alt=""
-        />
+      <div className="col-11 m-auto text-center rounded-3 pb-3 mt-4 section3-content-div">
+        <div className="rounded py-4" style={{ backgroundColor: "#E5E8EA" }}>
+          <img
+            src={props.image}
+            className="rounded-4 mt-3"
+            width="90%"
+            height="200"
+            alt=""
+          />
+        </div>
         <div
           className="active-none"
           style={{
@@ -24,13 +26,13 @@ const Product = (props) => {
             position: "absolute",
             top: "0",
             left: "0",
-            borderRadius: "8px",
+            borderRadius: "5px",
             color: "white",
           }}
         >
           <h6 style={{ fontWeight: "300", lineHeight: "28px" }}>HOT</h6>
         </div>
-        
+
         <div className="overlay mt-2 rounded-4 col-12 pt-5 pb-4">
           <div className="d-flex justify-content-around m-auto p-5 col-12">
             <button

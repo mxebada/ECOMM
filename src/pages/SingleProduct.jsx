@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { PRODUCTS } from "../data/products";
+import { PRODUCTS, RealatedProducts } from "../data/products";
 import {
   FaStar,
   FaRegStar,
@@ -355,27 +355,10 @@ const SingleProduct = () => {
             <div className="col-12 line-tab"></div>
             <div className="col-12 d-flex overflow-hidden">
               <div className="col-12" id="tab-1">
-                <p className="tab-p col-8">
-                  air max are always very comfortable fit, clean and just
-                  perfect in every way. just the box was too small and scrunched
-                  the sneakers up a little bit, not sure if the box was always
-                  this small but the 90s are and will always be one of my
-                  favorites.
-                </p>
-                <p className="tab-p col-8">
-                  air max are always very comfortable fit, clean and just
-                  perfect in every way. just the box was too small and scrunched
-                  the sneakers up a little bit, not sure if the box was always
-                  this small but the 90s are and will always be one of my
-                  favorites.
-                </p>
-                <p className="tab-p col-8">
-                  air max are always very comfortable fit, clean and just
-                  perfect in every way. just the box was too small and scrunched
-                  the sneakers up a little bit, not sure if the box was always
-                  this small but the 90s are and will always be one of my
-                  favorites.
-                </p>
+                <p className="tab-p col-8">{getProduct.desc}</p>
+                <p className="tab-p col-8">{getProduct.desc}</p>
+                <p className="tab-p col-8">{getProduct.desc}</p>
+                <p className="tab-p col-8">{getProduct.desc}</p>
               </div>
               <div className="col-12" id="tab-2">
                 <div className="mb-5">
@@ -446,6 +429,27 @@ const SingleProduct = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div
+        className="col-10 m-auto text-center my-4"
+        style={{ color: "#22262A" }}
+      >
+        <h1>RELATED PRODUCTS</h1>
+      </div>
+      <div className="col-10 m-auto d-flex mb-5">
+        {RealatedProducts.map((r) => (
+          <div className="col-3">
+            <Product
+              id={r.id}
+              title={r.title}
+              price={r.price}
+              offer={r.offer}
+              oldPrice={r.oldPrice}
+              image={r.image}
+            />
+          </div>
+        ))}
       </div>
     </div>
   );

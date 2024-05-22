@@ -2,11 +2,11 @@ import React from "react";
 import { HiSquares2X2 } from "react-icons/hi2";
 import { PiListLight } from "react-icons/pi";
 
-const Bar = (props) => {
+const Bar = ({ ProductNumber, changeToTable, changeToList, activeTable }) => {
   return (
     <div className="col-12 px-3 py-1 d-flex justify-content-between align-items-center">
       <h6 className="col-1 mt-2">
-        13 <span>Items</span>
+        {ProductNumber} <span>Items</span>
       </h6>
 
       <div className="col-2 d-flex align-items-center">
@@ -17,8 +17,8 @@ const Bar = (props) => {
           aria-label="Default select example"
         >
           <option selected>Name</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
+          <option value="1">Category</option>
+          <option value="2">Price</option>
           <option value="3">Three</option>
         </select>
       </div>
@@ -37,12 +37,18 @@ const Bar = (props) => {
         </select>
       </div>
       <div className="col-5 d-flex justify-content-end">
-        <h3 onClick={props.ChangeProducts} className={props.activeTable === "squ" ? "active-3" : ""} style={{ cursor: "pointer" }}>
-          {" "}
+        <h3
+          onClick={changeToTable}
+          className={activeTable === "squ" ? "active-3" : ""}
+          style={{ cursor: "pointer" }}
+        >
           <HiSquares2X2 />
         </h3>
-        <h3 onClick={props.ChangeProducts} className={props.activeTable === "list" ? "active-3" : ""} style={{ cursor: "pointer",marginLeft:"10px" }}>
-          {" "}
+        <h3
+          onClick={changeToList}
+          className={activeTable === "list" ? "active-3" : ""}
+          style={{ cursor: "pointer", marginLeft: "10px" }}
+        >
           <PiListLight />
         </h3>
       </div>

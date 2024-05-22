@@ -1,18 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import Product from "./Product";
 import UsePagination from "../Bar/Pagination";
-import { PRODUCTS } from "../../data/products";
 import ProductRow from "./ProductRow";
 
-const ProductList = (props) => {
-
-
+const ProductList = ({ HideShowProducts, filteredProducts }) => {
   return (
     <div className="mb-5 pb-3">
-      {props.HideShowProducts ? (
+      {HideShowProducts ? (
         <div className="col-12 d-flex justify-content-between flex-wrap mb-5">
-          {PRODUCTS.map((item) => (
-            <div className="col-10 m-auto col-md-5 col-xl-4 col-xxl-4 my-3">
+          {filteredProducts.map((item) => (
+            <div className="col-10 m-auto col-md-5 col-xl-4 my-3" key={item.id}>
               <Product
                 id={item.id}
                 title={item.title}
@@ -27,8 +24,8 @@ const ProductList = (props) => {
         </div>
       ) : (
         <div className="col-12 d-flex justify-content-between flex-wrap mb-5">
-          {PRODUCTS.map((item) => (
-            <div className="col-12">
+          {filteredProducts.map((item) => (
+            <div className="col-12" key={item.id}>
               <ProductRow
                 id={item.id}
                 title={item.title}
@@ -42,7 +39,7 @@ const ProductList = (props) => {
                 className="my-4"
                 style={{
                   display: "block",
-                  width: "90%",
+                  width: "98%",
                   height: "2px",
                   backgroundColor: "#F6F7F8",
                   margin: "auto",
@@ -52,7 +49,6 @@ const ProductList = (props) => {
           ))}
         </div>
       )}
-
       <div className="col-12">
         <UsePagination />
       </div>

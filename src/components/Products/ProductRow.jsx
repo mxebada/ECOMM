@@ -1,6 +1,7 @@
 import React from "react";
 import { FaRegHeart, FaRegStar, FaStar } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const ProductRow = (props) => {
   return (
@@ -19,7 +20,11 @@ const ProductRow = (props) => {
       </div>
       <div className="col-9">
         <div className="col-12 ps-3">
-          <h4 style={{ color: "#22262A", fontWeight: "500" }}>{props.title}</h4>
+          <Link to={`/product/${props.id}`} className="text-decoration-none">
+            <h4 style={{ color: "#22262A", fontWeight: "500" }}>
+              {props.title}
+            </h4>
+          </Link>
           <div className="col-8 d-flex justify-content-between">
             {" "}
             <div className="text-warning">

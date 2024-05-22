@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Slider from '@mui/material/Slider';
+import React, { useState } from "react";
+import Slider from "@mui/material/Slider";
 
 const PriceRangeSlider = ({ minPrice, maxPrice, onPriceChange }) => {
   const [value, setValue] = useState([minPrice, maxPrice]);

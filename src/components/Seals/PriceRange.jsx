@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import PriceRangeSlider from "./PriceRangeSlider";
 
-const PriceRange = () => {
+const PriceRange = ({ filterProductsByPrice }) => {
   const [selectedMinPrice, setSelectedMinPrice] = useState(20);
   const [selectedMaxPrice, setSelectedMaxPrice] = useState(1000);
 
   const handlePriceChange = (min, max) => {
     setSelectedMinPrice(min);
     setSelectedMaxPrice(max);
+    // Call the filterProductsByPrice function passed from the parent component
+    filterProductsByPrice(min, max);
   };
+
   return (
     <div>
       <div className="col-12 p-3" style={{ backgroundColor: "#F6F7F8" }}>
@@ -21,7 +24,7 @@ const PriceRange = () => {
         </div>
         <PriceRangeSlider
           minPrice={10}
-          maxPrice={1000}
+          maxPrice={500}
           onPriceChange={handlePriceChange}
         />
       </div>

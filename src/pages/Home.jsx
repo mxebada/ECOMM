@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import OfferBanner from "../components/Seals/OfferBanner";
-import { PRODUCTS } from "../data/products";
-import BestSeller from "../components/Seals/BestSeller";
+import BestSeller from "../components/Seals/BestSeller"; // Adjusted import path
 import DisplayProduct from "../components/Products/DisplayProduct";
 import AdidasMen from "../components/Adidas/AdidasMen";
 import FreeShipp from "../components/Adidas/FreeShip";
 import LatestNews from "../components/Adidas/LatestNews";
 import FeaturedProducts from "../components/Adidas/FeaturedProducts";
 import Search from "../components/Search/Search";
+import { PRODUCTS } from "../data/products";
+
 const Home = () => {
   const [visibleProducts, setVisibleProducts] = useState(8);
   const [activeFilter, setActiveFilter] = useState("All");
@@ -17,6 +18,8 @@ const Home = () => {
       ? PRODUCTS
       : PRODUCTS.filter((item) => item.category === activeFilter);
 
+      console.log(filteredProducts);
+
   const loadMoreProducts = () => {
     setVisibleProducts((prevVisibleProducts) => prevVisibleProducts + 4);
   };
@@ -24,6 +27,7 @@ const Home = () => {
   const filterProducts = (category) => {
     setActiveFilter(category);
   };
+
   return (
     <div>
       <OfferBanner />
@@ -34,12 +38,12 @@ const Home = () => {
         loadMoreProducts={loadMoreProducts}
       />
       <div className="col-12" style={{ backgroundColor: "#40BFFF" }}>
-    <AdidasMen/>
-</div>
+        <AdidasMen />
+      </div>
       <FreeShipp />
-      <LatestNews/>
-      <FeaturedProducts/>
-      <Search/>
+      <LatestNews />
+      <FeaturedProducts />
+      <Search />
     </div>
   );
 };

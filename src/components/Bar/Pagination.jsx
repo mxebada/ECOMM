@@ -5,7 +5,7 @@ import { styled } from "@mui/material/styles";
 const List = styled("ul")({
   listStyle: "none",
   padding: "0",
-  margin: 0,
+  margin: "0",
   display: "flex",
   justifyContent: "center",
   width: "100%",
