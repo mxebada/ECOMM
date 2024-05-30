@@ -229,3 +229,29 @@ display: flex;
 justify-content: space-between;
 margin: 2% 0;
 }
+
+
+
+
+/* ColorSelector.css */
+.color-selector {
+  font-family: Arial, sans-serif;
+  background-color: #F6F7F8;
+}
+
+.color-options {
+  display: flex;
+  gap: 20px;
+}
+
+.color-option {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.color-option.selected {
+  border-color: #007bff;
+}

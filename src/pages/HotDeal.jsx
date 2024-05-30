@@ -7,6 +7,7 @@ import Bar from "../components/Bar/Bar";
 import ProductList from "../components/Products/ProductList";
 import { PRODUCTS } from "../data/products";
 import Brands from "../components/Seals/Brands";
+import ColorSelector from "../components/Seals/ColorSelector";
 
 const HotDeal = () => {
   const [HideShowProducts, setHideShowProducts] = useState(true);
@@ -111,6 +112,8 @@ const HotDeal = () => {
           <PriceRange filterProductsByPrice={filterProductsByPrice} />
           <br />
           <Brands />
+          <br />
+          <ColorSelector/>
         </div>
         <div className="col-9 ps-5">
           <div className="col-12 pt-5">
