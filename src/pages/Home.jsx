@@ -30,7 +30,7 @@ const Home = () => {
 
   return (
     <div>
-      <OfferBanner />
+      {/* <OfferBanner /> */}
       <BestSeller filterProducts={filterProducts} activeFilter={activeFilter} />
       <DisplayProduct
         filteredProducts={filteredProducts}
@@ -40,9 +40,9 @@ const Home = () => {
       <div className="col-12" style={{ backgroundColor: "#40BFFF" }}>
         <AdidasMen />
       </div>
-      <FreeShipp />
-      <LatestNews />
-      <FeaturedProducts />
+      {/* <FreeShipp /> */}
+      {/* <LatestNews /> */}
+      {/* <FeaturedProducts /> */}
       <Search />
     </div>
   );
