@@ -259,9 +259,11 @@ margin: 2% 0;
   position:absolute;
   top:9px;
   right: 9px;
+  cursor: pointer;
 }
 .ar-1{
   position:absolute;
   top:9px;
   left: 9px;
+  cursor: pointer;
 }
