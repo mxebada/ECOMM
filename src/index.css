@@ -255,3 +255,13 @@ margin: 2% 0;
 .color-option.selected {
   border-color: #007bff;
 }
+.en-1{
+  position:absolute;
+  top:9px;
+  right: 9px;
+}
+.ar-1{
+  position:absolute;
+  top:9px;
+  left: 9px;
+}

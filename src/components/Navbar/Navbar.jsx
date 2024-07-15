@@ -10,7 +10,7 @@ const Navbar = () => {
 
   const { t } = useTranslation();
 
-  const { i18n } = useTranslation();
+  // const { i18n } = useTranslation();
 
   console.log(i18n.language);
   const user = false;
@@ -31,8 +31,8 @@ const Navbar = () => {
             }}
           />
           <FaSearch
-          className={i18n.language === en ? "en-1" : "ar-1"}
-            style={{ position: "absolute", top: "9px", right: "9px" }}
+          // className={i18n.language === en ? "en-1" : "ar-1"}
+            // style={{ position: "absolute", top: "9px", right: "9px" }}
           />
         </div>
       </div>
