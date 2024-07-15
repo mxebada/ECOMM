@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 // import { useFormik } from "formik";
 // import { useDispatch, useSelector } from "react-redux";
 // import { addUser } from "../redux/reducers/user";
-// import { t } from "i18next";
+import { t } from "i18next";
 import LogoLogin from "../components/Logo/LogoLogin";
 import { FaRegEnvelope } from "react-icons/fa6";
 import { RiLock2Line } from "react-icons/ri";
@@ -169,11 +169,10 @@ const Register = () => {
           </button>
         </form>
         <h6 class="mt-4 fs-6 h61">
-          {/* {t("have")} */}
+          {t("have")}
           Have a account?
           <Link to="/login" class="fw-bold">
-            {/* {t("signIn")} */}
-            Sign In
+            {t("signIn")}
           </Link>
         </h6>
       </div>

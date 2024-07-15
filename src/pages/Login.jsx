@@ -9,7 +9,7 @@ import { IoEye } from "react-icons/io5";
 // import { useFormik } from "formik";
 // import { useDispatch, useSelector } from "react-redux";
 // import { login } from "../redux/reducers/user";
-// import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 const Login = () => {
   // const navigate = useNavigate();
@@ -17,7 +17,7 @@ const Login = () => {
   // let users = useSelector((state) => state.user.users);
   // let online = useSelector((state) => state.user.online);
 
-  // const { t } = useTranslation();
+  const { t } = useTranslation();
 
   const [password, setPassword] = useState(false);
 
@@ -65,8 +65,7 @@ const Login = () => {
           </Link>
         </div>
         <h4 className="mt-3 h41 fs-2" style={{ fontWeight: "700" }}>
-          {/* {t("title")} */}
-          Welcome to E-com
+          {t("title")}
         </h4>
       </div>
       <form
@@ -74,14 +73,13 @@ const Login = () => {
         // onSubmit={formik.handleSubmit}
       >
         <h5 className="mt-1 h51 fs-6" style={{ fontWeight: "400" }}>
-          {/* {t("signTo")} */}
-          Sign in to continue
+          {t("signTo")}
         </h5>
         <div className="position-relative col-12 col-lg-9 mt-5 m-auto">
           <FaRegEnvelope className="fs-3 position-absolute inp-name" />
           <input
             type="email"
-            placeholder="Your Email"
+            placeholder={t("email")}
             className="col-12 inp1 px-5 fw-bold"
             id="email"
             name="email"
@@ -93,7 +91,7 @@ const Login = () => {
           <RiLock2Line className="fs-3 position-absolute inp-name" />
           <input
             type={password ? "text" : "password"}
-            placeholder="Password"
+            placeholder={t("password")}
             className="col-12 inp1 px-5 fw-bold"
             id="password"
             name="password"
@@ -124,17 +122,14 @@ const Login = () => {
           className="col-12 col-lg-9 inp2 mt-3 fs-5 fw-bold text-white"
           id="sign_in"
         >
-          {/* {t("signIn")} */}
-          Sign In
+          {t("signIn")}
         </button>
       </form>
       <div className="m-auto col-7 text-center">
         <h6 className="mt-4 fs-6 h61">
-          {/* {t("do")} */}
-          Don't have a account?
+          {t("do")}
           <Link to="/register" className="fw-bold ms-1">
-            {/* {t("register")} */}
-            Register
+            {t("register")}
           </Link>
         </h6>
       </div>

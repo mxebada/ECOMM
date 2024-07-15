@@ -3,49 +3,23 @@ import Logo from "../Logo/Logo";
 import { GrCart } from "react-icons/gr";
 import { FaSearch, FaRegUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import LanguageSelector from "./language-selector";
+
 
 const Navbar = () => {
   return (
     <div className="col-12 d-lg-flex justify-content-between col-lg-10 m-auto">
       <div className="col-5 d-flex align-items-center">
-        <ul
+      <ul
           className="d-flex align-items-center ps-0 mt-3"
           style={{ listStyle: "none", fontWeight: "400" }}
         >
-          <li className="dropdown">
-            <button
-              className="btn"
-              type="button"
-              id="languageDropdown"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              EN
-            </button>
-            {/* <ul className="dropdown-menu" aria-labelledby="languageDropdown">
-                {i18n.language === "ar" && (
-                  <li>
-                    <button
-                      className="dropdown-item"
-                      onClick={changeLanguageEn}
-                    >
-                      EN
-                    </button>
-                  </li>
-                )}
-                {i18n.language === "en" && (
-                  <li>
-                    <button
-                      className="dropdown-item"
-                      onClick={changeLanguageAr}
-                    >
-                      AR
-                    </button>
-                  </li>
-                )}
-              </ul> */}
+          <li>
+          <LanguageSelector />
+
           </li>
         </ul>
+    
 
         <div className="position-relative col-12 col-lg-6 ms-3">
           <input

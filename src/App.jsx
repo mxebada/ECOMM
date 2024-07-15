@@ -11,10 +11,12 @@ import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import SingleProduct from "./pages/SingleProduct";
 import HotDeal from "./pages/HotDeal";
+import { useTranslation } from "react-i18next";
 
 const App = () => {
   const location = useLocation();
   const showNavbar = ["/login", "/register"].includes(location.pathname);
+
   return (
     <div>
       {!showNavbar && <Navbar />}
