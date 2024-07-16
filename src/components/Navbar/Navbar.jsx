@@ -10,8 +10,6 @@ const Navbar = () => {
   const { t } = useTranslation();
 
   const { i18n } = useTranslation();
-
-  // console.log(i18n.language);
   const user = false;
   return (
     <div className="col-11 d-flex justify-content-between col-lg-10 m-auto">
