@@ -7,7 +7,6 @@ import LanguageSelector from "./language-selector";
 import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
-
   const { t } = useTranslation();
 
   const { i18n } = useTranslation();
@@ -30,9 +29,7 @@ const Navbar = () => {
               border: "1px solid #9098b1",
             }}
           />
-          <FaSearch
-          className={i18n.language === "en" ? "en-1" : "ar-1"}
-          />
+          <FaSearch className={i18n.language === "en" ? "en-1" : "ar-1"} />
         </div>
       </div>
 

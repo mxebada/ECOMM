@@ -9,6 +9,7 @@ import FeaturedProducts from "../components/Adidas/FeaturedProducts";
 import Search from "../components/Search/Search";
 import { PRODUCTS } from "../data/products";
 
+
 const Home = () => {
   const [visibleProducts, setVisibleProducts] = useState(8);
   const [activeFilter, setActiveFilter] = useState("All");
