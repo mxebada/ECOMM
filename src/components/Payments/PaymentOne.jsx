@@ -4,6 +4,7 @@ import { MdPayment } from "react-icons/md";
 import { AiOutlineBank } from "react-icons/ai";
 import CreditCardForm from "./CreditCard";
 import { FaArrowLeftLong, FaXmark } from "react-icons/fa6";
+import { useTranslation } from "react-i18next";
 
 const PaymentOne = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -41,10 +42,12 @@ const PaymentOne = () => {
     setSelectedMethod(method);
   };
 
+  const { t } = useTranslation();
+
   return (
-    <div>
+    <div className="">
       <button className="col-12 rounded py-3 check-out" onClick={toggleModal}>
-        Check Out
+        {t("checkOut")}
       </button>
       {modalOpen && (
         <div
@@ -77,6 +80,7 @@ const PaymentOne = () => {
                 padding: "20px",
                 borderRadius: "8px",
                 position: "relative",
+                overflow: "auto",
               }}
             >
               <div>
@@ -158,8 +162,8 @@ const PaymentOne = () => {
                     </div>
                   </div>
 
-                  <div className="col-12 d-flex justify-content-between py-5">
-                    <div className="col-6 pe-4">
+                  <div className="col-12 d-block d-lg-flex justify-content-between py-5">
+                    <div className="col-12 col-lg-6 px-0 px-lg-4">
                       <input
                         type="text"
                         placeholder="First Name"
@@ -173,7 +177,7 @@ const PaymentOne = () => {
                         className="col-12 border-0 px-3 bg-inp py-2 rounded my-4"
                       />
 
-                      <div>
+                      <div className="col-12">
                         <h2 className="fs-5 mb-3" style={{ color: "#40BFFF" }}>
                           Select Method Of Payment
                         </h2>
@@ -259,7 +263,7 @@ const PaymentOne = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6 ps-4">
+                    <div className="col-12 col-lg-6 ps-0 ps-lg-4 mt-3 mt-lg-0">
                       <input
                         type="text"
                         placeholder="Last Name"
@@ -283,7 +287,7 @@ const PaymentOne = () => {
                   </div>
                   <div className="col-12 d-flex justify-content-center">
                     <button
-                      className="col-4 rounded py-2 check-out"
+                      className="col-12 col-lg-4 rounded py-2 check-out"
                       onClick={handleNext}
                     >
                       Go to Payment
@@ -349,7 +353,7 @@ const PaymentOne = () => {
                   <CreditCardForm />
                   <div className="col-12 mt-4 d-flex justify-content-center">
                     <button
-                      className="col-4 m-auto rounded py-2 check-out"
+                      className="col-12 col-sm-9 col-lg-4 m-auto rounded py-2 check-out"
                       onClick={handleNext}
                     >
                       Confirm
@@ -432,7 +436,7 @@ const PaymentOne = () => {
                   </div>
                   <div className="col-12 d-flex mt-3 justify-content-center">
                     <button
-                      className="col-4 m-auto rounded py-2 check-out"
+                      className="col-8 col-lg-4 m-auto rounded py-2 check-out"
                       onClick={handleComplete}
                     >
                       Complete

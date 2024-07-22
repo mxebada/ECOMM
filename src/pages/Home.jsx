@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import OfferBanner from "../components/Seals/OfferBanner";
-import BestSeller from "../components/Seals/BestSeller"; // Adjusted import path
+import BestSeller from "../components/Seals/BestSeller"; 
 import DisplayProduct from "../components/Products/DisplayProduct";
 import AdidasMen from "../components/Adidas/AdidasMen";
 import FreeShipp from "../components/Adidas/FreeShip";
@@ -31,7 +31,7 @@ const Home = () => {
 
   return (
     <div>
-      {/* <OfferBanner /> */}
+      <OfferBanner />
       <BestSeller filterProducts={filterProducts} activeFilter={activeFilter} />
       <DisplayProduct
         filteredProducts={filteredProducts}
@@ -41,9 +41,9 @@ const Home = () => {
       <div className="col-12" style={{ backgroundColor: "#40BFFF" }}>
         <AdidasMen />
       </div>
-      {/* <FreeShipp /> */}
-      {/* <LatestNews /> */}
-      {/* <FeaturedProducts /> */}
+      <FreeShipp />
+      <LatestNews />
+      <FeaturedProducts />
       <Search />
     </div>
   );

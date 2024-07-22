@@ -18,6 +18,7 @@ const Login = () => {
   // let online = useSelector((state) => state.user.online);
 
   const { t } = useTranslation();
+  const { i18n } = useTranslation();
 
   const [password, setPassword] = useState(false);
 
@@ -76,7 +77,13 @@ const Login = () => {
           {t("signTo")}
         </h5>
         <div className="position-relative col-12 col-lg-9 mt-5 m-auto">
-          <FaRegEnvelope className="fs-3 position-absolute inp-name" />
+          <FaRegEnvelope
+            className={
+              i18n.language === "en"
+                ? "en-2 fs-3 inp-name"
+                : "ar-2 fs-3 inp-name"
+            }
+          />
           <input
             type="email"
             placeholder={t("email")}
@@ -88,7 +95,13 @@ const Login = () => {
           />
         </div>
         <div className="position-relative col-12 col-lg-9 mt-3 m-auto">
-          <RiLock2Line className="fs-3 position-absolute inp-name" />
+          <RiLock2Line
+            className={
+              i18n.language === "en"
+                ? "en-2 fs-3 inp-name"
+                : "ar-2 fs-3 inp-name"
+            }
+          />
           <input
             type={password ? "text" : "password"}
             placeholder={t("password")}
@@ -97,14 +110,11 @@ const Login = () => {
             name="password"
             // value={formik.values.password}
             // onChange={formik.handleChange}
-            style={{ padding: "0 595px 0 50px" }}
           />
           <span
-            className="position-absolute border-0"
+            className={i18n.language === "en" ? "en-3" : "ar-3"}
             onClick={ShowHidePassword}
             style={{
-              top: "13px",
-              right: "15px",
               color: "#9098b1",
               backgroundColor: "transparent",
               cursor: "pointer",

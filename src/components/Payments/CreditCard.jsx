@@ -30,8 +30,8 @@ const CreditCardForm = () => {
   };
 
   return (
-    <div className="col-12 d-flex justify-content-between py-5 mt-3">
-      <div className="pe-4 credit">
+    <div className="col-12 d-block d-lg-flex justify-content-between py-5 mt-3">
+      <div className="pe-4 credit col-12 m-auto col-sm-9 col-lg-6">
         <div className="col-11 m-auto mt-2 d-flex justify-content-between">
           <div
             className="plat overflow-hidden mt-3 ms-3"
@@ -48,11 +48,11 @@ const CreditCardForm = () => {
           <div className="ms-4 ps-1 fs-5 text-white">
             {expiry || "mohamed ebada"}
           </div>
-          <div className="ms-3 fs-5 text-white">{cvv || "11/33"}</div>
+          <div className="me-3 fs-5 text-white">{cvv || "11/33"}</div>
         </div>
         {/* <div className="holder">{holderNumber}</div> */}
       </div>
-      <form className="col-6 ps-4">
+      <form className="col-12 m-auto col-sm-9 col-lg-6 ps-lg-4 mt-4 pt-2">
         <input
           type="text"
           placeholder="Card Number"
@@ -62,7 +62,7 @@ const CreditCardForm = () => {
           className="col-12 border-0 px-3 bg-inp py-2 rounded "
         />
         <div className="d-flex justify-content-between my-4">
-          <label className="pe-2 col-6">
+          <label className="col-5">
             <input
               type="text"
               placeholder="Expiry"
@@ -72,7 +72,7 @@ const CreditCardForm = () => {
               className="col-12 border-0 px-3 bg-inp py-2 rounded "
             />
           </label>
-          <label className="ps-2 col-6">
+          <label className="col-6">
             <input
               type="text"
               placeholder="CVV"
@@ -98,7 +98,7 @@ const CreditCardForm = () => {
             onChange={handleSaveCardChange}
             style={{ width: "17px", height: "17px" }}
           />
-          <h3 className="ms-2" style={{ color: "#999999", fontSize: "15px" }}>
+          <h3 className="mx-2" style={{ color: "#999999", fontSize: "15px" }}>
             Save this credit card
           </h3>
         </label>

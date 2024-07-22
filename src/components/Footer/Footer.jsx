@@ -1,28 +1,29 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
-import m from "../../assets/m1.png";
 import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import LogoFooter from "../Logo/LogoFooter";
 import { SiWesternunion } from "react-icons/si";
 import { RiVisaLine } from "react-icons/ri";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <div className="col-12 pt-5 pb-4" style={{ backgroundColor: "#BCDDFE" }}>
       <div className="container pt-5">
         <div className="d-flex justify-content-between flex-wrap">
-          <div className="col-lg-4 col-12 mt-3">
-            <div className="col-12">
-              <Link to="/" className="d-flex text-decoration-none mt-1">
+          <div className="col-lg-4 col-10 m-auto mt-3">
+            <div className="col-12 ">
+              <a href="#j" className="d-flex text-decoration-none mt-1">
                 <LogoFooter />
                 <h3
                   className="mt-2 mx-3"
                   style={{ color: "#22262A", fontWeight: "700" }}
                 >
-                  E-Comm
+                  {t("bigTitle")}
                 </h3>
-              </Link>
+              </a>
             </div>
             <p
               className="col-10 nav-link-color mt-2"
@@ -33,9 +34,12 @@ const Footer = () => {
               ever.Since the 1500s, when an unknown printer.
             </p>
           </div>
-          <div className="col-lg-3 col-12 mt-3">
-            <h4>Follow Us</h4>
-            <p className="nav-link-color mt-3" style={{ fontWeight: "400" }}>
+          <div className="col-lg-4 col-10 m-auto mt-3">
+            <h4 className=" fw-bold">{t("follow")}</h4>
+            <p
+              className="nav-link-color col-10 mt-3"
+              style={{ fontWeight: "400" }}
+            >
               Since the 1500s, when an unknown printer took a galley of type and
               scrambled.
             </p>
@@ -69,7 +73,7 @@ const Footer = () => {
               </h4>
             </div>
           </div>
-          <div className="col-lg-3 col-12 mt-3">
+          <div className="col-lg-4 col-10 m-auto mt-3">
             <h4>Contact Us</h4>
             <p className="nav-link-color" style={{ fontWeight: "400" }}>
               {" "}
@@ -89,12 +93,15 @@ const Footer = () => {
           className="d-block mt-3"
           style={{ height: "2px", backgroundColor: "#F6F7F8" }}
         ></span>
-        <div className="d-flex justify-content-between">
-          <p className="nav-link-color mt-2" style={{ fontWeight: "400" }}>
+        <div className="d-block d-lg-flex justify-content-between">
+          <p
+            className="nav-link-color mt-2 text-center"
+            style={{ fontWeight: "400" }}
+          >
             © 2018 Ecommerce theme by www.bisenbaev.com
           </p>
 
-          <div className="col-3 d-flex justify-content-around mt-2">
+          <div className="col-8 col-lg-3 d-flex justify-content-around m-auto mt-2">
             <div
               className="bg-black rounded d-flex justify-content-center"
               style={{ width: "48px", height: "34px" }}
@@ -106,7 +113,6 @@ const Footer = () => {
                 <SiWesternunion />
               </p>
             </div>
-            {/* <img src={m} width={48} height={34} alt="" /> */}
             <div
               className="rounded"
               style={{

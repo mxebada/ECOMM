@@ -10,16 +10,16 @@ const Navbar = () => {
   const { t } = useTranslation();
 
   const { i18n } = useTranslation();
-  
-  const user = false;
+
+  const user = true;
   return (
-    <div className="col-11 d-flex justify-content-between col-lg-10 m-auto">
+    <div id="j" className="col-11 d-flex justify-content-between col-lg-10 m-auto">
       <div className="col-1 col-lg-5 d-flex align-items-center">
         <LanguageSelector />
 
         <div className="position-relative col-12 col-lg-6 d-none d-lg-block ms-3">
           <input
-            type="email"
+            type="text"
             placeholder={t("search")}
             className="col-12 px-2 py-1"
             style={{
@@ -43,21 +43,37 @@ const Navbar = () => {
 
       <div className="col-2 col-lg-5 d-flex align-items-center justify-content-end">
         {user ? (
-          <ul
-            className="d-flex justify-content-end align-items-center mt-3 me-3 col-10"
-            style={{ listStyle: "none", fontWeight: "500" }}
-          >
-            <li>
-              <h6 className="text-decoration-none border py-2 px-4 rounded-3 me-1">
-                Sign In
-              </h6>
-            </li>
-            <li>
-              <h6 className="text-decoration-none border ms-3 py-2 px-4 rounded-3">
-                Sign Up
-              </h6>
-            </li>
-          </ul>
+          <div>
+            <Link to="/login" className=" text-black">
+              <FaRegUser className="fs-5 d-block d-lg-none" />
+            </Link>
+
+            <ul
+              className="d-none d-lg-flex justify-content-end align-items-center mt-3 me-3 col-12"
+              style={{ listStyle: "none", fontWeight: "500" }}
+            >
+              <Link
+                to="/login"
+                className="text-black mx-1 text-decoration-none text-center col-6"
+              >
+                <li>
+                  <h6 className="text-decoration-none border py-2 px-4 rounded-3 ">
+                    {t("signIn")}
+                  </h6>
+                </li>
+              </Link>
+              <Link
+                to="/register"
+                className="text-black mx-3 text-decoration-none text-center col-6"
+              >
+                <li>
+                  <h6 className="text-decoration-none border py-2 px-4 rounded-3">
+                    {t("signUp")}
+                  </h6>
+                </li>
+              </Link>
+            </ul>
+          </div>
         ) : (
           <h5 className="text-decoration-none text-black fw-bold">
             <FaRegUser className="fs-5" />

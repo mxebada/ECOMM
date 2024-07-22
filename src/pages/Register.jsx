@@ -4,13 +4,13 @@ import { Link, useNavigate } from "react-router-dom";
 // import { useFormik } from "formik";
 // import { useDispatch, useSelector } from "react-redux";
 // import { addUser } from "../redux/reducers/user";
-import { t } from "i18next";
 import LogoLogin from "../components/Logo/LogoLogin";
 import { FaRegEnvelope } from "react-icons/fa6";
 import { RiLock2Line } from "react-icons/ri";
 import { IoEyeOff } from "react-icons/io5";
 import { IoEye } from "react-icons/io5";
 import { FaUser } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const Register = () => {
   // const navigate = useNavigate();
@@ -53,70 +53,87 @@ const Register = () => {
   //   },
   //   onSubmit: handleSubmit,
   // });
+  const { t } = useTranslation();
+  const { i18n } = useTranslation();
+
   return (
-    <div class="container">
-      <div class="m-auto text-center overflow-hidden pt-5">
-        <div class="col-8 m-auto">
-          <Link to="/" class="col-1 m-auto rounded-5 d-md-block">
-            <div class="logo1 mt-5 m-auto d-flex justify-content-center align-items-center">
+    <div className="container">
+      <div className="m-auto text-center overflow-hidden pt-5">
+        <div className="col-8 m-auto">
+          <Link to="/" className="col-1 m-auto rounded-5 d-md-block">
+            <div className="logo1 mt-5 m-auto d-flex justify-content-center align-items-center">
               <LogoLogin />
             </div>
           </Link>
         </div>
-        <h4 class="mt-3 h41 fs-3" style={{ fontWeight: "700" }}>
-          {/* {t("let")} */}
-          Let's Get Started
+        <h4 className="mt-3 h41 fs-3" style={{ fontWeight: "700" }}>
+          {t("let")}
         </h4>
         <form
-          class="m-auto col-12 col-lg-9 text-center overflow-hidden"
+          className="m-auto col-12 col-lg-9 text-center overflow-hidden"
           // onSubmit={formik.handleSubmit}
         >
-          <h5 class="mt-1 h51 fs-6" style={{ fontWeight: "400" }}>
-            {/* {t("create")} */}
-            Create an new account
+          <h5 className="mt-1 h51 fs-6" style={{ fontWeight: "400" }}>
+            {t("create")}
           </h5>
-          <div class="position-relative col-12 col-lg-9 mt-5 m-auto">
-            <FaUser className="fs-3 position-absolute inp-name" />
+          <div className="position-relative col-12 col-lg-9 mt-5 m-auto">
+            <FaUser
+              className={
+                i18n.language === "en"
+                  ? "en-2 fs-3 position-absolute inp-name"
+                  : "ar-2 fs-3 position-absolute inp-name"
+              }
+            />
             <input
               type="text"
-              placeholder="Full Name"
-              class="col-12 inp1 px-5 fw-bold"
+              placeholder={t("fullName")}
+              className="col-12 inp1 px-5 fw-bold"
               id="username"
               name="fullName"
               // value={formik.values.fullName}
               // onChange={formik.handleChange}
             />
           </div>
-          <div class="position-relative col-12 col-lg-9 mt-3 m-auto">
-            <FaRegEnvelope className="fs-3 position-absolute inp-name" />
+          <div className="position-relative col-12 col-lg-9 mt-3 m-auto">
+            <FaRegEnvelope
+              className={
+                i18n.language === "en"
+                  ? "en-2 fs-3 position-absolute inp-name"
+                  : "ar-2 fs-3 position-absolute inp-name"
+              }
+            />
 
             <input
               type="email"
-              placeholder="Your Email"
-              class="col-12 inp1 px-5 fw-bold"
+              placeholder={t("email")}
+              className="col-12 inp1 px-5 fw-bold"
               name="email"
               // value={formik.values.email}
               // onChange={formik.handleChange}
             />
           </div>
-          <div class="position-relative col-12 col-lg-9 mt-3 m-auto">
-            <RiLock2Line className="fs-3 position-absolute inp-name" />
+          <div className="position-relative col-12 col-lg-9 mt-3 m-auto">
+            <RiLock2Line
+              className={
+                i18n.language === "en"
+                  ? "en-2 fs-3 position-absolute inp-name"
+                  : "ar-2 fs-3 position-absolute inp-name"
+              }
+            />
 
             <input
               type={password ? "text" : "password"}
-              placeholder="Password"
-              class="col-12 inp1 px-5 fw-bold"
+              placeholder={t("password")}
+              className="col-12 inp1 px-5 fw-bold"
               id="password"
               name="password"
               // value={formik.values.password}
               // onChange={formik.handleChange}
             />
             <span
-              className="position-absolute border-0"
+              className={i18n.language === "en" ? "en-3" : "ar-3"}
               onClick={ShowHidePassword}
               style={{
-                top: "13px",
-                right: "15px",
                 color: "#9098b1",
                 backgroundColor: "transparent",
                 cursor: "pointer",
@@ -129,24 +146,28 @@ const Register = () => {
               )}
             </span>
           </div>
-          <div class="position-relative col-12 col-lg-9 mt-3 m-auto">
-            <RiLock2Line className="fs-3 position-absolute inp-name" />
+          <div className="position-relative col-12 col-lg-9 mt-3 m-auto">
+            <RiLock2Line
+              className={
+                i18n.language === "en"
+                  ? "en-2 fs-3 position-absolute inp-name"
+                  : "ar-2 fs-3 position-absolute inp-name"
+              }
+            />
 
             <input
               type={confirmPassword ? "text" : "password"}
-              placeholder="Confirm Password"
-              class="col-12 inp1 px-5 fw-bold"
+              placeholder={t("CPassword")}
+              className="col-12 inp1 px-5 fw-bold"
               id="confirm"
               name="confirmPassword"
               // value={formik.values.confirmPassword}
               // onChange={formik.handleChange}
             />
             <span
-              className="position-absolute border-0"
+              className={i18n.language === "en" ? "en-3" : "ar-3"}
               onClick={ShowHideConfirmPassword}
               style={{
-                top: "13px",
-                right: "15px",
                 color: "#9098b1",
                 backgroundColor: "transparent",
                 cursor: "pointer",
@@ -161,17 +182,15 @@ const Register = () => {
           </div>
           <button
             type="submit"
-            class="col-12 col-lg-9 inp2 mt-3 fs-5 fw-bold text-white"
+            className="col-12 col-lg-9 inp2 mt-3 fs-5 fw-bold text-white"
             id="sign_up"
           >
-            {/* {t("signUp")} */}
-            Sign Up
+            {t("signUp")}
           </button>
         </form>
-        <h6 class="mt-4 fs-6 h61">
+        <h6 className="mt-4 fs-6 h61">
           {t("have")}
-          Have a account?
-          <Link to="/login" class="fw-bold">
+          <Link to="/login" className="fw-bold">
             {t("signIn")}
           </Link>
         </h6>

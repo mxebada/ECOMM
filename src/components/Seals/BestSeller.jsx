@@ -5,7 +5,7 @@ import { categories } from "../../data/BestCategory";
 const BestSeller = ({ filterProducts, activeFilter }) => {
   const { t } = useTranslation();
   return (
-    <div style={{ marginTop: "350px" }}>
+    <div style={{ marginTop: "100px" }}>
       <h2
         className="mt-5 fw-bold pt-5 pt-xxl-0 text-center"
         style={{ color: "#22262A" }}

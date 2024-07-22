@@ -3,7 +3,7 @@ import { HotSeals } from "../../data/HotSeals";
 
 const HotSeal = () => {
   return (
-    <div className="container d-flex hot-seal">
+    <div className="container d-none d-xl-flex hot-seal">
       {HotSeals.map((item) => (
         <div className="col-4" style={{ height: "100%", position: "relative" }}>
           <h4

@@ -1,16 +1,18 @@
 import React from "react";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { ProductsFeat } from "../../data/FeaturedProducts";
+import { useTranslation } from "react-i18next";
 
 const FeaturedProducts = () => {
+  const { t } = useTranslation();
   return (
     <div className="my-5 pb-5">
       <h1 className="text-center fw-bold my-5" style={{ color: "#22262A" }}>
-        FEATURED PRODUCTS
+        {t("feat")}
       </h1>
-      <div className="container d-flex flex-wrap">
+      <div className="col-12 col-lg-10 m-auto d-block d-lg-flex flex-wrap justify-content-between">
         {ProductsFeat.map((fe) => (
-          <div className="col-4 px-5 mt-3 d-flex">
+          <div className="col-12 col-lg-6 col-xl-4 m-auto mt-3 d-flex justify-content-between flex-wrap">
             <div>
               <img
                 src={fe.img}
