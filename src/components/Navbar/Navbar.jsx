@@ -15,7 +15,6 @@ const Navbar = () => {
   const online = useSelector((state)=> state.user.online);
   const users = useSelector((state)=> state.user.users)
 
-
   return (
     <div id="j" className="col-11 d-flex justify-content-between col-lg-10 m-auto">
       <div className="col-1 col-lg-5 d-flex align-items-center">
@@ -47,14 +46,13 @@ const Navbar = () => {
 
       <div className="col-2 col-lg-5 d-flex align-items-center justify-content-end">
         {online ? (
-            <h5 className="text-decoration-none text-black fw-bold">
-            <FaRegUser className="fs-5" />
-            <span
-              className="fs-6 d-none d-lg-inline mx-3"
+            <h5 className="col-7 text-decoration-none text-black d-flex align-items-center justify-content-between fw-bold">
+            <h4
+              className="fs-5 d-none d-lg-inline mx-3"
               style={{ fontWeight: "400" }}
             >
               {t("myProfile")}
-            </span>
+            </h4>
           </h5>
         ) : (
           <div>

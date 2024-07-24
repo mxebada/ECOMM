@@ -11,8 +11,8 @@ import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import SingleProduct from "./pages/SingleProduct";
 import HotDeal from "./pages/HotDeal";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   const location = useLocation();
@@ -21,7 +21,7 @@ const App = () => {
   return (
     <div>
       {!showNavbar && <Navbar />}
-      <ToastContainer/>
+      <ToastContainer />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />

@@ -9,7 +9,7 @@ import { FaRegEnvelope, FaUser } from "react-icons/fa";
 import { RiLock2Line } from "react-icons/ri";
 import { IoEyeOff, IoEye } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
-import { errorMsg, infoMsg, successMsg } from "../components/Toast/Toast.js";
+import { errorMsg, successMsg } from "../components/Toast/Toast.jsx";
 
 const Register = () => {
   const navigate = useNavigate();

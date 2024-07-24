@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { PRODUCTS, RealatedProducts } from "../data/products";
-
+import { PRODUCTS } from "../data/products";
 import {
   FaStar,
   FaRegStar,
@@ -27,60 +26,14 @@ const SingleProduct = () => {
 
   return (
     <div>
-      <div
-        className="col-12"
-        style={{
-          backgroundColor: "#F6F7F8",
-        }}
-      >
-        <ul
-          className="d-flex justify-content-center mt-2 fs-6"
-          style={{ listStyle: "none", fontWeight: "400" }}
-        >
-          <li>
-            <Link
-              to="/"
-              className="text-decoration-none"
-              style={{ color: "#33A0FF" }}
-            >
-              HOME
-            </Link>
-          </li>
-          <span className="mx-2" style={{ color: "#C1C8CE" }}>
-            /
-          </span>
-          <li>
-            <Link
-              to="/hotdeal"
-              className="text-decoration-none"
-              style={{ color: "#33A0FF" }}
-            >
-              Hot Deal
-            </Link>
-          </li>
-          <span className="mx-2" style={{ color: "#C1C8CE" }}>
-            /
-          </span>
-          <li>
-            <Link
-              to="/"
-              className="text-decoration-none"
-              style={{ color: "#262626" }}
-            >
-              {getProduct.title}
-            </Link>
-          </li>
-        </ul>
-      </div>
-
-      <div className="col-10 m-auto my-5 d-xl-flex">
+      <div className="col-10 m-auto mb-5 d-xl-flex">
         <div className="col-12 col-xl-9 py-5 d-block d-xl-flex justify-content-between">
           <div
-            className="col-12 col-xl-5 bg-success d-block d-xl-flex flex-column justify-content-between"
-            style={{ height: "515px" }}
+            className="col-12 col-xl-5 bg-danger mb-3 d-block d-xl-flex flex-column justify-content-between"
+            // style={{ height: "515px" }}
           >
             {" "}
-            <div className="col-12 bg-danger">
+            <div className="col-12">
               <img
                 src={getProduct.image}
                 style={{ backgroundColor: "#E5E8EA", height: " " }}
@@ -108,9 +61,9 @@ const SingleProduct = () => {
               ))}
             </div>
           </div>
-          <div className="col-12 col-xl-7 px-5">
+          <div className="col-12 col-xl-7 px-lg-4">
             <h1
-              className="col-12 text-center"
+              className="col-12 bg-info text-center"
               style={{ color: "#22262A", fontWeight: "500" }}
             >
               {getProduct.title}
