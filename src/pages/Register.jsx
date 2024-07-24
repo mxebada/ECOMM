@@ -1,22 +1,20 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link, useNavigate } from "react-router-dom";
-// import { useFormik } from "formik";
-// import { useDispatch, useSelector } from "react-redux";
-// import { addUser } from "../redux/reducers/user";
+import { useFormik } from "formik";
+import { useDispatch, useSelector } from "react-redux";
+import { addUser } from "../redux/reducers/user";
 import LogoLogin from "../components/Logo/LogoLogin";
-import { FaRegEnvelope } from "react-icons/fa6";
+import { FaRegEnvelope, FaUser } from "react-icons/fa";
 import { RiLock2Line } from "react-icons/ri";
-import { IoEyeOff } from "react-icons/io5";
-import { IoEye } from "react-icons/io5";
-import { FaUser } from "react-icons/fa";
+import { IoEyeOff, IoEye } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
+import { errorMsg, infoMsg, successMsg } from "../components/Toast/Toast.js";
 
 const Register = () => {
-  // const navigate = useNavigate();
-  // const dispatch = useDispatch();
-  // let users = useSelector((state) => state.user.users);
-  // console.log(users);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const users = useSelector((state) => state.user.users);
 
   const [password, setPassword] = useState(false);
   const [confirmPassword, setConfirmPassword] = useState(false);
@@ -24,35 +22,39 @@ const Register = () => {
   const ShowHidePassword = () => {
     setPassword(!password);
   };
+
   const ShowHideConfirmPassword = () => {
     setConfirmPassword(!confirmPassword);
   };
 
-  // const handleSubmit = (values) => {
-  //   if (values.password !== values.confirmPassword)
-  //     return alert("Password doesnt match");
+  const handleSubmit = (values) => {
+    if (values.password !== values.confirmPassword) {
+      return errorMsg("Password doesn't Match !!!");
+    }
 
-  //   let dublicated = users.some((user) => user.email === values.email);
-  //   if (dublicated) return alert("Email is already Taken");
+    const duplicated = users.some((user) => user.email === values.email);
+    if (duplicated) {
+      return errorMsg("Email is already Taken");
+    }
 
-  //   alert("account created");
+    dispatch(addUser(values));
+    successMsg("Account Created");
 
-  //   dispatch(addUser(values));
+    setTimeout(() => {
+      navigate("/login");
+    }, 1000);
+  };
 
-  //   setTimeout(() => {
-  //     navigate("/login");
-  //   }, 500);
-  // };
+  const formik = useFormik({
+    initialValues: {
+      fullName: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    },
+    onSubmit: handleSubmit,
+  });
 
-  // const formik = useFormik({
-  //   initialValues: {
-  //     fullName: "",
-  //     email: "",
-  //     password: "",
-  //     confirmPassword: "",
-  //   },
-  //   onSubmit: handleSubmit,
-  // });
   const { t } = useTranslation();
   const { i18n } = useTranslation();
 
@@ -71,7 +73,7 @@ const Register = () => {
         </h4>
         <form
           className="m-auto col-12 col-lg-9 text-center overflow-hidden"
-          // onSubmit={formik.handleSubmit}
+          onSubmit={formik.handleSubmit}
         >
           <h5 className="mt-1 h51 fs-6" style={{ fontWeight: "400" }}>
             {t("create")}
@@ -90,8 +92,8 @@ const Register = () => {
               className="col-12 inp1 px-5 fw-bold"
               id="username"
               name="fullName"
-              // value={formik.values.fullName}
-              // onChange={formik.handleChange}
+              value={formik.values.fullName}
+              onChange={formik.handleChange}
             />
           </div>
           <div className="position-relative col-12 col-lg-9 mt-3 m-auto">
@@ -102,14 +104,13 @@ const Register = () => {
                   : "ar-2 fs-3 position-absolute inp-name"
               }
             />
-
             <input
               type="email"
               placeholder={t("email")}
               className="col-12 inp1 px-5 fw-bold"
               name="email"
-              // value={formik.values.email}
-              // onChange={formik.handleChange}
+              value={formik.values.email}
+              onChange={formik.handleChange}
             />
           </div>
           <div className="position-relative col-12 col-lg-9 mt-3 m-auto">
@@ -120,15 +121,14 @@ const Register = () => {
                   : "ar-2 fs-3 position-absolute inp-name"
               }
             />
-
             <input
               type={password ? "text" : "password"}
               placeholder={t("password")}
               className="col-12 inp1 px-5 fw-bold"
               id="password"
               name="password"
-              // value={formik.values.password}
-              // onChange={formik.handleChange}
+              value={formik.values.password}
+              onChange={formik.handleChange}
             />
             <span
               className={i18n.language === "en" ? "en-3" : "ar-3"}
@@ -154,15 +154,14 @@ const Register = () => {
                   : "ar-2 fs-3 position-absolute inp-name"
               }
             />
-
             <input
               type={confirmPassword ? "text" : "password"}
               placeholder={t("CPassword")}
               className="col-12 inp1 px-5 fw-bold"
               id="confirm"
               name="confirmPassword"
-              // value={formik.values.confirmPassword}
-              // onChange={formik.handleChange}
+              value={formik.values.confirmPassword}
+              onChange={formik.handleChange}
             />
             <span
               className={i18n.language === "en" ? "en-3" : "ar-3"}

@@ -6,13 +6,13 @@ const OfferBanner = () => {
   const { t } = useTranslation();
   return (
     <div className=" px-2">
-      <div className="col-12 rounded-2 m-auto bg-black offer img overflow-hidden">
+      <div className="col-12 rounded-2 m-auto bg-black offer img">
         <div class="content">
           <p>{t("superFlash")}</p>
           <p>{t("superofer")}</p>
         </div>
+        <HotSeal />
       </div>
-      <HotSeal />
     </div>
   );
 };

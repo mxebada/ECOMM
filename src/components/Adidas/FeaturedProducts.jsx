@@ -13,7 +13,7 @@ const FeaturedProducts = () => {
       <div className="col-12 col-lg-10 m-auto d-block d-lg-flex flex-wrap justify-content-between">
         {ProductsFeat.map((fe) => (
           <div className="col-12 col-lg-6 col-xl-4 m-auto mt-3 d-flex justify-content-between flex-wrap">
-            <div>
+            <div className="">
               <img
                 src={fe.img}
                 width={120}
@@ -22,7 +22,7 @@ const FeaturedProducts = () => {
               />
             </div>
 
-            <div className="ms-3">
+            <div className="mx-3">
               <h5 style={{ color: "#22262A" }}>{fe.title}</h5>
               <div className="d-flex text-warning">
                 <FaStar />
@@ -36,7 +36,7 @@ const FeaturedProducts = () => {
                 <h6 style={{ color: "#FF4858" }}>${fe.price}.00</h6>
                 <h6
                   style={{ color: "#C1C8CE" }}
-                  className="text-decoration-line-through ms-3"
+                  className="text-decoration-line-through mx-3"
                 >
                   ${fe.oldPrice}
                 </h6>

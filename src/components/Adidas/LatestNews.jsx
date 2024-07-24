@@ -1,9 +1,33 @@
 import React from "react";
-import { Last } from "../../data/LatesNews";
+import freeShip1 from "../../assets/Nike_logo_emblem_logotype 1.png";
+import refund from "../../assets/figma-1-logo 1.png";
+import support from "../../assets/kronos-logo-1-1 1.png";
 import { useTranslation } from "react-i18next";
 
 const LatestNews = () => {
   const { t } = useTranslation();
+
+  const Last = [
+    {
+      img: freeShip1,
+      title: t("fash"),
+      date: "01 Jan,2015",
+      desc: t("lorem"),
+    },
+    {
+      img: refund,
+      title: t("fig"),
+      date: "01 Jan,2015",
+      desc: t("lorem"),
+    },
+    {
+      img: support,
+      title: t("hr"),
+      date: "01 Jan,2015",
+      desc: t("lorem"),
+    },
+  ];
+
   return (
     <div className="my-5 py-5">
       <h1 className="text-center fw-bold my-4" style={{ color: "#22262A" }}>

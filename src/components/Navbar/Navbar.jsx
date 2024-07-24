@@ -5,13 +5,17 @@ import { FaSearch, FaRegUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import LanguageSelector from "./language-selector";
 import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const { t } = useTranslation();
 
   const { i18n } = useTranslation();
 
-  const user = true;
+  const online = useSelector((state)=> state.user.online);
+  const users = useSelector((state)=> state.user.users)
+
+
   return (
     <div id="j" className="col-11 d-flex justify-content-between col-lg-10 m-auto">
       <div className="col-1 col-lg-5 d-flex align-items-center">
@@ -42,40 +46,8 @@ const Navbar = () => {
       </Link>
 
       <div className="col-2 col-lg-5 d-flex align-items-center justify-content-end">
-        {user ? (
-          <div>
-            <Link to="/login" className=" text-black">
-              <FaRegUser className="fs-5 d-block d-lg-none" />
-            </Link>
-
-            <ul
-              className="d-none d-lg-flex justify-content-end align-items-center mt-3 me-3 col-12"
-              style={{ listStyle: "none", fontWeight: "500" }}
-            >
-              <Link
-                to="/login"
-                className="text-black mx-1 text-decoration-none text-center col-6"
-              >
-                <li>
-                  <h6 className="text-decoration-none border py-2 px-4 rounded-3 ">
-                    {t("signIn")}
-                  </h6>
-                </li>
-              </Link>
-              <Link
-                to="/register"
-                className="text-black mx-3 text-decoration-none text-center col-6"
-              >
-                <li>
-                  <h6 className="text-decoration-none border py-2 px-4 rounded-3">
-                    {t("signUp")}
-                  </h6>
-                </li>
-              </Link>
-            </ul>
-          </div>
-        ) : (
-          <h5 className="text-decoration-none text-black fw-bold">
+        {online ? (
+            <h5 className="text-decoration-none text-black fw-bold">
             <FaRegUser className="fs-5" />
             <span
               className="fs-6 d-none d-lg-inline mx-3"
@@ -84,6 +56,38 @@ const Navbar = () => {
               {t("myProfile")}
             </span>
           </h5>
+        ) : (
+          <div>
+          <Link to="/login" className=" text-black">
+            <FaRegUser className="fs-5 d-block d-lg-none" />
+          </Link>
+
+          <ul
+            className="d-none d-lg-flex justify-content-end align-items-center mt-3 me-3 col-12"
+            style={{ listStyle: "none", fontWeight: "500" }}
+          >
+            <Link
+              to="/login"
+              className="text-black mx-1 text-decoration-none text-center col-6"
+            >
+              <li>
+                <h6 className="text-decoration-none border py-2 px-4 rounded-3 ">
+                  {t("signIn")}
+                </h6>
+              </li>
+            </Link>
+            <Link
+              to="/register"
+              className="text-black mx-3 text-decoration-none text-center col-6"
+            >
+              <li>
+                <h6 className="text-decoration-none border py-2 px-4 rounded-3">
+                  {t("signUp")}
+                </h6>
+              </li>
+            </Link>
+          </ul>
+        </div>
         )}
 
         <div className="mt-2 position-relative" style={{ height: "40px" }}>

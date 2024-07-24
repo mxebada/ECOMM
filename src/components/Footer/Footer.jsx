@@ -29,9 +29,7 @@ const Footer = () => {
               className="col-10 nav-link-color mt-2"
               style={{ fontWeight: "400" }}
             >
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever.Since the 1500s, when an unknown printer.
+              {t("lorem1")}
             </p>
           </div>
           <div className="col-lg-4 col-10 m-auto mt-3">
@@ -40,8 +38,7 @@ const Footer = () => {
               className="nav-link-color col-10 mt-3"
               style={{ fontWeight: "400" }}
             >
-              Since the 1500s, when an unknown printer took a galley of type and
-              scrambled.
+              {t("sin")}
             </p>
             <div className="col-8 d-flex justify-content-between mt-3">
               <h4>
@@ -74,18 +71,17 @@ const Footer = () => {
             </div>
           </div>
           <div className="col-lg-4 col-10 m-auto mt-3">
-            <h4>Contact Us</h4>
+            <h4 className="fw-bold">{t("contact")}</h4>
             <p className="nav-link-color" style={{ fontWeight: "400" }}>
-              {" "}
-              E-Comm , 4578{" "}
+              {t("ec")}
             </p>
             <p className="nav-link-color" style={{ fontWeight: "400" }}>
               {" "}
-              Marmora Road,
+              {t("mar")}
             </p>
             <p className="nav-link-color" style={{ fontWeight: "400" }}>
               {" "}
-              Glasgow D04 89GR{" "}
+              {t("gl")}
             </p>
           </div>
         </div>
@@ -98,7 +94,7 @@ const Footer = () => {
             className="nav-link-color mt-2 text-center"
             style={{ fontWeight: "400" }}
           >
-            © 2018 Ecommerce theme by www.bisenbaev.com
+            {t("copy")}
           </p>
 
           <div className="col-8 col-lg-3 d-flex justify-content-around m-auto mt-2">

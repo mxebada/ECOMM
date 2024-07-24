@@ -6,16 +6,16 @@ import { FaRegEnvelope } from "react-icons/fa6";
 import { RiLock2Line } from "react-icons/ri";
 import { IoEyeOff } from "react-icons/io5";
 import { IoEye } from "react-icons/io5";
-// import { useFormik } from "formik";
-// import { useDispatch, useSelector } from "react-redux";
-// import { login } from "../redux/reducers/user";
+import { useFormik } from "formik";
+import { useDispatch, useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
+import { errorMsg, successMsg } from "../components/Toast/Toast";
+import { login } from "../redux/reducers/user";
 
 const Login = () => {
-  // const navigate = useNavigate();
-  // const dispatch = useDispatch();
-  // let users = useSelector((state) => state.user.users);
-  // let online = useSelector((state) => state.user.online);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  let users = useSelector((state) => state.user.users);
 
   const { t } = useTranslation();
   const { i18n } = useTranslation();
@@ -26,35 +26,34 @@ const Login = () => {
     setPassword(!password);
   };
 
-  // const handleSubmit = ({ email, password }) => {
-  //   console.log(email, password);
-  //   const user = users.find((ele) => ele.email === email);
+  const handleSubmit = ({ email, password }) => {
+    const user = users.find((ele) => ele.email === email);
 
-  //   if (!user) {
-  //     return alert("email not found");
-  //   }
+    if (!user) {
+      return errorMsg("Email Not Found !!!");
+    }
 
-  //   const validPassword = user.password === password;
+    const validPassword = user.password === password;
 
-  //   if (!validPassword) {
-  //     return alert("invalid password");
-  //   }
+    if (!validPassword) {
+      return errorMsg("Invalid Password !!!");
+    }
 
-  //   alert("welcome");
+    successMsg("Welcome");
 
-  //   dispatch(login(user));
-  //   setTimeout(() => {
-  //     navigate("/");
-  //   }, 500);
-  // };
+    dispatch(login(user));
+    setTimeout(() => {
+      navigate("/");
+    }, 500);
+  };
 
-  // const formik = useFormik({
-  //   initialValues: {
-  //     email: "",
-  //     password: "",
-  //   },
-  //   onSubmit: handleSubmit,
-  // });
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+      password: "",
+    },
+    onSubmit: handleSubmit,
+  });
   return (
     <div className="container overflow-hidden">
       <div className="text-center pt-5">
@@ -71,7 +70,7 @@ const Login = () => {
       </div>
       <form
         className="m-auto col-12 col-lg-9 text-center overflow-hidden"
-        // onSubmit={formik.handleSubmit}
+        onSubmit={formik.handleSubmit}
       >
         <h5 className="mt-1 h51 fs-6" style={{ fontWeight: "400" }}>
           {t("signTo")}
@@ -90,8 +89,8 @@ const Login = () => {
             className="col-12 inp1 px-5 fw-bold"
             id="email"
             name="email"
-            // value={formik.values.email}
-            // onChange={formik.handleChange}
+            value={formik.values.email}
+            onChange={formik.handleChange}
           />
         </div>
         <div className="position-relative col-12 col-lg-9 mt-3 m-auto">
@@ -108,8 +107,8 @@ const Login = () => {
             className="col-12 inp1 px-5 fw-bold"
             id="password"
             name="password"
-            // value={formik.values.password}
-            // onChange={formik.handleChange}
+            value={formik.values.password}
+            onChange={formik.handleChange}
           />
           <span
             className={i18n.language === "en" ? "en-3" : "ar-3"}
