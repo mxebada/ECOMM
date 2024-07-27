@@ -5,6 +5,7 @@ export const HotSeals = [
     offer: "55% off",
     oldPrice: 500,
     image: "https://www.pngarts.com/files/3/Clutch-Bag-Transparent.png",
+    id: 1,
   },
   {
     title: "Ray-Ban Sunglasses",
@@ -13,6 +14,7 @@ export const HotSeals = [
     oldPrice: 210,
     image:
       "https://www.pngarts.com/files/3/Sunglasses-For-Women-PNG-Image-Transparent.png",
+    id: 2,
   },
   {
     title: "Nike Air Max 270",
@@ -21,5 +23,6 @@ export const HotSeals = [
     oldPrice: 950,
     image:
       "https://www.pngarts.com/files/3/Running-Shoes-PNG-Background-Image.png",
+    id: 3,
   },
 ];

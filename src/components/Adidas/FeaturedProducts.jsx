@@ -12,8 +12,11 @@ const FeaturedProducts = () => {
       </h1>
       <div className="col-12 col-lg-10 m-auto d-block d-lg-flex flex-wrap justify-content-between">
         {ProductsFeat.map((fe) => (
-          <div className="col-12 col-lg-6 col-xl-4 m-auto mt-3 d-flex justify-content-between flex-wrap">
-            <div className="">
+          <div
+            className="col-12 col-lg-6 col-xl-4 m-auto mt-3 d-flex justify-content-between flex-wrap"
+            key={fe.id}
+          >
+            <div>
               <img
                 src={fe.img}
                 width={120}

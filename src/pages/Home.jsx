@@ -18,8 +18,6 @@ const Home = () => {
       ? PRODUCTS
       : PRODUCTS.filter((item) => item.category === activeFilter);
 
-  console.log(filteredProducts);
-
   const loadMoreProducts = () => {
     setVisibleProducts((prevVisibleProducts) => prevVisibleProducts + 4);
   };

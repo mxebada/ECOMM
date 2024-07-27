@@ -16,51 +16,6 @@ export const Cart = () => {
 
   return (
     <div>
-      <div
-        className="col-12"
-        style={{
-          backgroundColor: "#F6F7F8",
-        }}
-      >
-        <ul
-          className="d-flex justify-content-center mt-2 fs-6"
-          style={{ listStyle: "none", fontWeight: "400" }}
-        >
-          <li>
-            <Link
-              to="/"
-              className="text-decoration-none"
-              style={{ color: "#33A0FF" }}
-            >
-              HOME
-            </Link>
-          </li>
-          <span className="mx-2" style={{ color: "#C1C8CE" }}>
-            /
-          </span>
-          <li>
-            <Link
-              to="/cart"
-              className="text-decoration-none"
-              style={{ color: "#262626" }}
-            >
-              Hot Deal
-            </Link>
-          </li>
-          <span className="mx-2" style={{ color: "#C1C8CE" }}>
-            /
-          </span>
-          <li>
-            <Link
-              to="/cart"
-              className="text-decoration-none"
-              style={{ color: "#262626" }}
-            >
-              Nike Airmax 270 React
-            </Link>
-          </li>
-        </ul>
-      </div>
 
       <div className="container d-none d-lg-flex mt-5">
         <div className="col-7">

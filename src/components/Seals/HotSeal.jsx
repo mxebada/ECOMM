@@ -5,7 +5,11 @@ const HotSeal = () => {
   return (
     <div className="container d-none d-xl-flex hot-seal">
       {HotSeals.map((item) => (
-        <div className="col-4" style={{ height: "100%", position: "relative" }}>
+        <div
+          className="col-4"
+          style={{ height: "100%", position: "relative" }}
+          key={item.id}
+        >
           <h4
             className="col-8 fw-bold ms-5 mt-3"
             style={{ position: "absolute", color: "#223263" }}
