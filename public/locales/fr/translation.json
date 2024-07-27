@@ -1,7 +1,0 @@
-{
-  "greeting": "Bonjour, Bienvenue!",
-  "description": {
-    "line1": "Vous regardez la chaîne YouTube {{channel}}",
-    "line2": "Ceci est un tutoriel d'internationalisation"
-  }
-}

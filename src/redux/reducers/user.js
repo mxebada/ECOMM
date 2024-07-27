@@ -4,18 +4,22 @@ export const userSlice = createSlice({
   name: 'user',
   initialState: {
     online: false,
-    users: []
+    users: [],
+    user:{}
   },
   reducers: {
-    login: (state, action) => {
-      state.online = true;
+    login: (state,action) => {
+        state.online = true
+        state.user = action.payload
     },
     logout: (state) => {
-      state.online = false;
+      state.online = false
+      state.user = {}
     },
-    addUser: (state, action) => {
-      state.users.push(action.payload);
-    },
+    addUser: (state,action) =>{
+        state.users.push(action.payload)
+    }
+ 
   },
 });
 

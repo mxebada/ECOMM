@@ -39,7 +39,7 @@ const Login = () => {
       return errorMsg("Invalid Password !!!");
     }
 
-    successMsg("Welcome");
+    successMsg(`Welcome ${user?.fullName}`);
 
     dispatch(login(user));
     setTimeout(() => {
@@ -128,7 +128,7 @@ const Login = () => {
         </div>
         <button
           type="submit"
-          className="col-12 col-lg-9 inp2 mt-3 fs-5 fw-bold text-white"
+          className="col-12 col-lg-9 inp2 mt-3 fs-5 fw-bold"
           id="sign_in"
         >
           {t("signIn")}

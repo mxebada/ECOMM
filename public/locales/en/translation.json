@@ -22,6 +22,7 @@
   "do": "Don't have a account? ",
   "register": "Register",
   "signIn": " Sign In",
+  "logout": "Logout",
   "let": "Let's Get Started",
   "create": "Create an new account",
   "fullName": "Full Name",

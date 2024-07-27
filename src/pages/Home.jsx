@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import OfferBanner from "../components/Seals/OfferBanner";
 import BestSeller from "../components/Seals/BestSeller";
 import DisplayProduct from "../components/Products/DisplayProduct";
@@ -7,16 +7,23 @@ import FreeShipp from "../components/Adidas/FreeShip";
 import LatestNews from "../components/Adidas/LatestNews";
 import FeaturedProducts from "../components/Adidas/FeaturedProducts";
 import Search from "../components/Search/Search";
-import { PRODUCTS } from "../data/products";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProducts } from "../redux/reducers/products";
 
 const Home = () => {
   const [visibleProducts, setVisibleProducts] = useState(8);
   const [activeFilter, setActiveFilter] = useState("All");
 
+  const dispatch = useDispatch();
+  const products = useSelector((state) => state.products.all);
+  useEffect(() => {
+    dispatch(fetchProducts());
+  }, [dispatch]);
+
   const filteredProducts =
     activeFilter === "All"
-      ? PRODUCTS
-      : PRODUCTS.filter((item) => item.category === activeFilter);
+      ? products
+      : products.filter((item) => item.category === activeFilter);
 
   const loadMoreProducts = () => {
     setVisibleProducts((prevVisibleProducts) => prevVisibleProducts + 4);

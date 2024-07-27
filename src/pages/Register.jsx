@@ -181,7 +181,7 @@ const Register = () => {
           </div>
           <button
             type="submit"
-            className="col-12 col-lg-9 inp2 mt-3 fs-5 fw-bold text-white"
+            className="col-12 col-lg-9 inp2 mt-3 fs-5 fw-bold"
             id="sign_up"
           >
             {t("signUp")}

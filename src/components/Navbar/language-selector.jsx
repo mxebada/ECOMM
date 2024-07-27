@@ -19,7 +19,7 @@ const languageSelector = () => {
           className={
             "ar" === i18n.language
               ? "selected"
-              : "border border-secondary bg-white rounded-2 p-1 ms-3"
+              : "border border-secondary bg-white rounded-2 p-1 mx-3"
           }
           onClick={() => changeLanguage("ar")}
         >
@@ -30,7 +30,7 @@ const languageSelector = () => {
           className={
             "en" === i18n.language
               ? "selected"
-              : "border border-secondary bg-white rounded-2 p-1 ms-3"
+              : "border border-secondary bg-white rounded-2 p-1 mx-3"
           }
           onClick={() => changeLanguage("en")}
         >

@@ -60,7 +60,27 @@
   height: 55px;
   border-radius: 5px;
   background-color: #40bfff;
-  border: none;
+  border: 1px solid #40bfff;
+  color: white;
+  transition: .5s;
+}
+.inp2:hover{
+  background-color: white;
+  color: #40bfff;
+  border: 1px solid #40bfff;
+  transition: .5s;
+}
+.inp3 {
+  background-color: #40bfff;
+  color: white;  
+  border: 1px solid #40bfff;
+
+}
+.inp3:hover{
+  background-color: white;
+  color: #40bfff;
+  border: 1px solid #40bfff;
+  transition: .5s;
 }
 .inp-send {
   border-radius: 5px;
@@ -274,7 +294,18 @@ margin: 2% 0;
   left: 9px;
   cursor: pointer;
 }
-
+.log-reg{
+  top: 82px;
+  z-index: 666666;
+  position: absolute;
+  background-color: white;
+}
+.log-reg1{
+  right: 4%;
+}
+.log-reg2{
+  left: 4%;
+}
 @media (min-width: 468px) {
   .offer{
     height: 50vh;
