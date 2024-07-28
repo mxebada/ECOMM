@@ -6,7 +6,7 @@ const BestSeller = ({ filterProducts, activeFilter, categories }) => {
   const [marginTop, setMarginTop] = useState(
     window.innerWidth < 1200 ? "-30px" : "250px"
   );
-
+  
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 1200) {
@@ -15,7 +15,7 @@ const BestSeller = ({ filterProducts, activeFilter, categories }) => {
         setMarginTop("250px");
       }
     };
-
+    
     window.addEventListener("resize", handleResize);
 
     return () => {

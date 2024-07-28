@@ -306,6 +306,32 @@ margin: 2% 0;
 .log-reg2{
   left: 4%;
 }
+.cart-line{
+  border-bottom: 2px solid #EBF0FF;
+}
+.del-p{
+  color: #FF4252;
+}
+.del-p:hover{
+  color: #f17c86;
+}
+.custom-div {
+  width: 80%;
+  max-width: 900px;
+  height: 80%;
+  max-height: 600px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 1150px) {
+  .custom-div {
+    overflow: auto;
+  }
+}
 @media (min-width: 468px) {
   .offer{
     height: 50vh;

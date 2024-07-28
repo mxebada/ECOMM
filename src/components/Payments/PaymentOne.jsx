@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaPaypal, FaCheck } from "react-icons/fa";
 import { MdPayment } from "react-icons/md";
 import { AiOutlineBank } from "react-icons/ai";
@@ -44,6 +44,26 @@ const PaymentOne = () => {
 
   const { t } = useTranslation();
 
+  const [over, SetOver] = useState(
+    window.innerWidth < 1200 ? "auto" : "hidden"
+  );
+  console.log(over);
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 1200) {
+        SetOver("auto");
+      } else {
+        SetOver("hidden");
+      }
+    };
+    
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="">
       <button className="col-12 rounded py-3 check-out" onClick={toggleModal}>
@@ -70,19 +90,7 @@ const PaymentOne = () => {
               alignItems: "center",
             }}
           >
-            <div
-              style={{
-                width: "80%",
-                maxWidth: "900px",
-                height: "80%",
-                maxHeight: "600px",
-                backgroundColor: "white",
-                padding: "20px",
-                borderRadius: "8px",
-                position: "relative",
-                overflow: "auto",
-              }}
-            >
+            <div className="custom-div">
               <div>
                 <div className="col-10 m-auto d-flex justify-content-between">
                   <button
@@ -100,7 +108,7 @@ const PaymentOne = () => {
                     <FaXmark />
                   </button>
                 </div>
-                <div className="text-center my-3">
+                <div className="text-center my-2">
                   <h1 style={{ fontSize: "32px", color: "#40BFFF" }}>
                     Make Payment
                   </h1>
@@ -351,7 +359,7 @@ const PaymentOne = () => {
                     </div>
                   </div>
                   <CreditCardForm />
-                  <div className="col-12 mt-4 d-flex justify-content-center">
+                  <div className="col-12 mt-1 d-flex justify-content-center">
                     <button
                       className="col-12 col-sm-9 col-lg-4 m-auto rounded py-2 check-out"
                       onClick={handleNext}

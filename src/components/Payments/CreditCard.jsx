@@ -30,7 +30,7 @@ const CreditCardForm = () => {
   };
 
   return (
-    <div className="col-12 d-block d-lg-flex justify-content-between py-5 mt-3">
+    <div className="col-12 d-block d-lg-flex justify-content-between py-5 mt-1">
       <div className="pe-4 credit col-12 m-auto col-sm-9 col-lg-6">
         <div className="col-11 m-auto mt-2 d-flex justify-content-between">
           <div

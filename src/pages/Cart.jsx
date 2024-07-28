@@ -1,25 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import ProductInCart from "../components/Products/ProductInCart";
 import PaymentOne from "../components/Payments/PaymentOne";
 import { PRODUCTS } from "../data/products";
 import { useTranslation } from "react-i18next";
-// import { ShopContext } from "../context/shop-context";
-// import PaymentOne from "../components/Payments/PaymentOne";
 
 export const Cart = () => {
-  //   const { cartItems, getTotalCartAmount } = useContext(ShopContext);
-
-  //   let totalAmount = getTotalCartAmount();
-
   const { t } = useTranslation();
 
   return (
     <div>
-
-      <div className="container d-none d-lg-flex mt-5">
+      <div className="d-md-none cart-line pt-3 pb-4">
+        <h1 className="fw-bold mx-4" style={{ color: "#223263" }}>
+          {t("cart")}
+        </h1>
+      </div>
+      <div className="col-12 col-md-11 col-lg-10 m-auto d-none d-md-flex mt-5">
         <div className="col-7">
-          <h3 className="me-5 pe-4" style={{ color: "#262626" }}>
+          <h3 className="mx-5 px-5" style={{ color: "#262626" }}>
             {t("product")}
           </h3>
         </div>
@@ -27,9 +24,9 @@ export const Cart = () => {
           className="col-5 d-flex justify-content-between"
           style={{ color: "#262626" }}
         >
-          <h3 className="mx-3">{t("price")}</h3>
-          <h3 className="mx-3">{t("qty")}</h3>
-          <h3 className="mx-1">{t("unitPrice")}</h3>
+          <h3 className="">{t("price")}</h3>
+          <h3 className="">{t("qty")}</h3>
+          <h3 className="">{t("unitPrice")}</h3>
         </div>
       </div>
 
@@ -64,8 +61,8 @@ export const Cart = () => {
         );
       })}
 
-      <div className="container d-block d-lg-flex">
-        <div className="col-12 col-lg-6">
+      <div className="col-11 m-auto d-block d-md-flex">
+        <div className="col-12 col-md-6">
           <div className="col-12 col-md-8 m-auto d-flex my-lg-5 py-5">
             <input
               type="text"
@@ -80,8 +77,8 @@ export const Cart = () => {
             </button>
           </div>
         </div>
-        <div className="col-12 col-lg-6">
-          <div className="col-12 col-md-8 col-xl-6 m-auto mb-5 mt-lg-5 py-lg-5 mb-lg-0">
+        <div className="col-12 col-md-6">
+          <div className="col-12 col-md-8 col-xl-6 m-auto mb-5 mt-md-5 py-lg-5 mb-lg-0">
             <div
               className="d-flex justify-content-between "
               style={{ color: "#262626" }}
@@ -105,7 +102,7 @@ export const Cart = () => {
             </div>
             <div
               className="d-flex justify-content-between py-4"
-              style={{ color: "#262626", borderTop: "2px solid #F6F7F8" }}
+              style={{ color: "#262626", borderTop: "2px dotted #F6F7F8" }}
             >
               <h3>{t("total")}</h3>
               <h3>$ 500</h3>

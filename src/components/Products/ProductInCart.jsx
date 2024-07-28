@@ -1,28 +1,21 @@
 import React from "react";
-// import { ShopContext } from "../../context/shop-context";
+import { FaRegTrashCan } from "react-icons/fa6";
 
 const ProductInCart = (props) => {
-  //   const { cartItems, addToCart, removeFromCart, removeProduct } =
-  //     useContext(ShopContext);
-
-  //   const cartItemAmount = cartItems[props.id];
   const cartItemAmount = 5;
 
   return (
-    <div>
-      <div
-        className="container d-flex py-5"
+     <div>
+       <div
+        className="col-11 col-lg-10 m-auto d-none d-md-flex py-5"
         style={{ borderBottom: "2px solid #F6F7F8" }}
       >
         <div className="col-7 d-flex align-items-center">
           <button
-            className="fs-2 me-2 border-0 d-flex justify-content-center bg-opacity-10 bg-transparent align-items-center rounded-circle"
-            style={{
-              color: "#FF4252",
-            }}
+            className="fs-3 me-2 border-0 d-flex justify-content-center bg-opacity-10 bg-transparent align-items-center rounded-circle del-p"
             onClick={() => removeProduct(props.id)}
           >
-            x
+          <FaRegTrashCan />
           </button>
           <img
             src={props.image}
@@ -31,7 +24,7 @@ const ProductInCart = (props) => {
             className="rounded mx-5"
             alt=""
           />
-          <h3 className="ms-5" style={{ color: "#262626" }}>
+          <h3 className="ms-lg-5" style={{ color: "#262626" }}>
             {props.title}
           </h3>
         </div>
@@ -62,7 +55,60 @@ const ProductInCart = (props) => {
           <h3 style={{ color: "#262626" }}>$ {props.price}</h3>
         </div>
       </div>
-    </div>
+      <div className="col-11 my-4 d-block d-md-none border rounded m-auto">
+        <div className="d-flex"> 
+           <img
+            src={props.image}
+            height={130}
+            className="rounded col-4 col-sm-3 ms-1 p-3"
+            alt=""
+          />
+          <div className="col-8">
+            <div className="col-12 d-flex justify-content-between" style={{height:"50%"}}>
+            <h3 className="ms-lg-5 mt-3" style={{ color: "#223263" }}>
+            {props.title}
+          </h3>
+          <button
+            className="fs-1 mx-3 border-0 d-flex justify-content-center bg-opacity-10 bg-transparent align-items-center rounded-circle"
+            style={{
+              color: "#9098B1",
+            }}
+            onClick={() => removeProduct(props.id)}
+          >
+           <FaRegTrashCan />
+
+          </button>
+            </div>
+            <div className="col-12 d-flex justify-content-between " style={{height:"50%"}}>
+            <h3 style={{ color: "#40BFFF" }} className="mt-3 col-3">$ {props.price}</h3>
+            <div
+            className="col-7 mt-3 mx-3 d-flex justify-content-between border rounded align-items-center px-3" 
+            style={{height:"60%"}}
+          >
+            <button
+              className="fs-3 pt-1 border-0 bg-transparent"
+              style={{ color: "#9098B1", cursor: "pointer" }}
+              onClick={() => removeFromCart(props.id)}
+            >
+              -
+            </button>
+            <h3 className="mt-2 pt-1 d-flex align-items-center px-4" style={{ backgroundColor: "#F6F7F8" ,height:"100%",color:"#223263" }}
+            >
+              {cartItemAmount}
+            </h3>
+            <button
+              className="fs-3 pt-1 border-0 bg-transparent"
+              style={{ color: "#9098B1" }}
+              onClick={() => addToCart(props.id)}
+            >
+              +
+            </button>
+          </div>
+            </div>
+          </div>
+          </div>
+      </div>
+     </div>
   );
 };
 
