@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { categories } from "../../data/BestCategory";
 
-const BestSeller = ({ filterProducts, activeFilter }) => {
+const BestSeller = ({ filterProducts, activeFilter, categories }) => {
   const { t } = useTranslation();
   const [marginTop, setMarginTop] = useState(
     window.innerWidth < 1200 ? "-30px" : "250px"
@@ -37,16 +36,21 @@ const BestSeller = ({ filterProducts, activeFilter }) => {
         className="col-11 col-sm-9 col-md-7 col-xl-5 d-flex justify-content-between text-center p-0 m-auto mt-4"
         style={{ fontWeight: "600" }}
       >
+        <li
+          className={activeFilter === "All" ? "active-2 fs-4" : "fs-5"}
+          style={{ listStyle: "none", cursor: "pointer" }}
+          onClick={() => filterProducts("All")}
+        >
+          {t("All")}
+        </li>
         {categories.map((item) => (
           <li
-            key={item.title2}
-            className={
-              activeFilter === `${item.title2}` ? "active-2 fs-4" : "cfs-5"
-            }
+            key={item}
+            className={activeFilter === `${item}` ? "active-2 fs-4" : "fs-5"}
             style={{ listStyle: "none", cursor: "pointer" }}
-            onClick={() => filterProducts(`${item.title2}`)}
+            onClick={() => filterProducts(`${item}`)}
           >
-            {t(`${item.title}`)}
+            {t(`${item}`)}
           </li>
         ))}
       </ul>

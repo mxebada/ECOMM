@@ -1,5 +1,5 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { PRODUCTS } from '../../data/products';
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { PRODUCTS } from "../../data/products";
 
 export const fetchProducts = createAsyncThunk(
   "products/fetchProducts",
@@ -23,7 +23,9 @@ export const fetchCategory = createAsyncThunk(
     try {
       return new Promise((resolve) => {
         setTimeout(() => {
-          const categories = [...new Set(PRODUCTS.map(product => product.category))];
+          const categories = [
+            ...new Set(PRODUCTS.map((product) => product.category)),
+          ];
           resolve(categories);
         }, 500);
       });
@@ -40,7 +42,7 @@ export const fetchProduct = createAsyncThunk(
     try {
       return new Promise((resolve) => {
         setTimeout(() => {
-          const product = PRODUCTS.find(product => product.id === id);
+          const product = PRODUCTS.find((product) => product.id === id);
           resolve(product);
         }, 500);
       });
@@ -52,11 +54,11 @@ export const fetchProduct = createAsyncThunk(
 );
 
 export const productsSlice = createSlice({
-  name: 'products',
+  name: "products",
   initialState: {
     all: [],
     categories: [],
-    product: {}
+    product: {},
   },
   reducers: {},
   extraReducers: (builder) => {
@@ -69,7 +71,7 @@ export const productsSlice = createSlice({
     builder.addCase(fetchProduct.fulfilled, (state, action) => {
       state.product = action.payload;
     });
-  }
+  },
 });
 
 // Action creators are generated for each case reducer function

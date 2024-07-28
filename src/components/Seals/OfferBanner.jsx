@@ -7,7 +7,7 @@ const OfferBanner = () => {
   return (
     <div className=" px-2">
       <div className="col-12 rounded-2 m-auto bg-black offer img">
-        <div class="content">
+        <div className="content">
           <p>{t("superFlash")}</p>
           <p>{t("superofer")}</p>
         </div>

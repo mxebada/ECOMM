@@ -8,7 +8,7 @@ import LatestNews from "../components/Adidas/LatestNews";
 import FeaturedProducts from "../components/Adidas/FeaturedProducts";
 import Search from "../components/Search/Search";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProducts } from "../redux/reducers/products";
+import { fetchCategory, fetchProducts } from "../redux/reducers/products";
 
 const Home = () => {
   const [visibleProducts, setVisibleProducts] = useState(8);
@@ -16,9 +16,12 @@ const Home = () => {
 
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products.all);
+  const categories = useSelector((state) => state.products.categories);
   useEffect(() => {
     dispatch(fetchProducts());
+    dispatch(fetchCategory());
   }, [dispatch]);
+
 
   const filteredProducts =
     activeFilter === "All"
@@ -36,7 +39,7 @@ const Home = () => {
   return (
     <div>
       <OfferBanner />
-      <BestSeller filterProducts={filterProducts} activeFilter={activeFilter} />
+      <BestSeller filterProducts={filterProducts} activeFilter={activeFilter} categories={categories} />
       <DisplayProduct
         filteredProducts={filteredProducts}
         visibleProducts={visibleProducts}
