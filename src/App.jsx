@@ -13,10 +13,12 @@ import SingleProduct from "./pages/SingleProduct";
 import HotDeal from "./pages/HotDeal";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useSelector } from "react-redux";
 
 const App = () => {
   const location = useLocation();
   const showNavbar = ["/login", "/register"].includes(location.pathname);
+  const online = useSelector((state) => state.user.online);
 
   return (
     <div>
@@ -24,10 +26,10 @@ const App = () => {
       <ToastContainer />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/profile" element={<Profile />} />
+        {online && <Route path="/cart" element={<Cart />} />}
+        {!online && <Route path="/login" element={<Login />} />}
+        {!online && <Route path="/register" element={<Register />} />}
+        {online && <Route path="/profile" element={<Profile />} />}
         <Route path="/product/:id" element={<SingleProduct />} />
         <Route path="/hotdeal" element={<HotDeal />} />
 

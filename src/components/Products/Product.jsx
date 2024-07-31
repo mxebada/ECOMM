@@ -1,10 +1,13 @@
 import React from "react";
-import { FaRegHeart } from "react-icons/fa";
+import { FaRegHeart, FaSearch } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Product = (props) => {
+
+  const online = useSelector((state)=>state.user.online)
   return (
     <div>
       <div className="col-11 m-auto text-center rounded-3 pb-3 mt-4 section3-content-div">
@@ -35,22 +38,21 @@ const Product = (props) => {
 
         <div className="overlay mt-2 rounded-4 col-12 pt-5 pb-4">
           <div className="d-flex justify-content-around m-auto p-5 col-12">
-            <button
-              className="border-0 bg-white"
+        {online && <button
+              className="icon-s fs-4 fw-bold d-flex justify-content-center align-items-center"
               onClick={() => addToCart(props.id)}
             >
-              <div className="icon-s fw-bold fs-2">
-                <IoCartOutline />
-              </div>
-            </button>
-            <button className="icon-s fw-bold fs-4">
-              <FaRegHeart />
-            </button>
+              <IoCartOutline />
+            </button>}
+            <Link
+              to={`/product/${props.id}`}
+              className="icon-s fs-5 d-flex justify-content-center align-items-center"
+            >
+              <FaSearch />
+            </Link>
           </div>
         </div>
-        <Link to={`/product/${props.id}`} className="text-decoration-none">
-          <h2 className="fs-4 mt-2 py-2 h41">{props.title}</h2>
-        </Link>
+        <h2 className="fs-4 mt-2 py-2 h41">{props.title}</h2>
         <div className="d-flex text-warning col-7 m-auto pt-2">
           <FaStar className="ms-2" />
           <FaStar className="ms-3" />

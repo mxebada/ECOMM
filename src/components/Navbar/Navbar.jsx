@@ -30,7 +30,7 @@ const Navbar = () => {
             <input
               type="text"
               placeholder={t("search")}
-              className="col-12 px-2 py-1"
+              className="col-12 form-control px-2 py-1"
               style={{
                 color: "#9098b1",
                 borderRadius: "5px",
@@ -49,10 +49,29 @@ const Navbar = () => {
           {t("bigTitle")}
         </Link>
         <div className="col-3 col-lg-5 d-flex align-items-center justify-content-end">
+          <Link to="/cart" className="mx-4 position-relative">
+            <span
+              className="d-block position-absolute rounded-circle text-center text-white"
+              style={{
+                width: "19px",
+                height: "19px",
+                backgroundColor: "#FB7181",
+                top: "-8px",
+                left: "13px",
+                fontSize: "12px",
+                lineHeight: "21px",
+                cursor: "pointer",
+              }}
+            >
+              5
+            </span>
+            <GrCart className="fs-4 text-black" style={{ cursor: "pointer" }} />
+          </Link>
+
           {online ? (
-            <div className="col-2 text-decoration-none text-black d-flex align-items-center justify-content-between fw-bold">
+            <div className="col-2 mx-3 mx-xl-0 text-decoration-none text-black d-flex align-items-center justify-content-between fw-bold">
               <div
-                className="text-black"
+                className="text-black mx-lg-5 px-0 px-xl-2"
                 style={{ cursor: "pointer" }}
                 onClick={handleProfile}
               >
@@ -84,9 +103,9 @@ const Navbar = () => {
               )}
             </div>
           ) : (
-            <div className="col-2 text-decoration-none text-black d-flex align-items-center justify-content-between fw-bold">
+            <div className="col-2 mx-3 mx-xl-0 text-decoration-none text-black d-flex align-items-center justify-content-between fw-bold">
               <div
-                className="text-black"
+                className="text-black mx-lg-5 px-0 px-xl-2"
                 style={{ cursor: "pointer" }}
                 onClick={handleProfile}
               >
@@ -116,29 +135,6 @@ const Navbar = () => {
               )}
             </div>
           )}
-
-          <Link
-            to="/cart"
-            className="mx-4 position-relative"
-            style={{ fontSize: "n5px" }}
-          >
-            <span
-              className="d-block position-absolute rounded-circle text-center text-white"
-              style={{
-                width: "19px",
-                height: "19px",
-                backgroundColor: "#FB7181",
-                top: "-8px",
-                left: "13px",
-                fontSize: "12px",
-                lineHeight: "21px",
-                cursor: "pointer",
-              }}
-            >
-              5
-            </span>
-            <GrCart className="fs-4 text-black" style={{ cursor: "pointer" }} />
-          </Link>
         </div>
       </div>
     </div>

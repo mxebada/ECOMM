@@ -78,53 +78,53 @@ const Register = () => {
           <h5 className="mt-1 h51 fs-6" style={{ fontWeight: "400" }}>
             {t("create")}
           </h5>
-          <div className="position-relative col-12 col-lg-9 mt-5 m-auto">
+          <div className="position-relative px-1 col-12 col-lg-9 mt-5 m-auto">
             <FaUser
               className={
                 i18n.language === "en"
-                  ? "en-2 fs-3 position-absolute inp-name"
-                  : "ar-2 fs-3 position-absolute inp-name"
+                  ? "en-2 fs-3 position-absolute inp-name1"
+                  : "ar-2 fs-3 position-absolute inp-name1"
               }
             />
             <input
               type="text"
               placeholder={t("fullName")}
-              className="col-12 inp1 px-5 fw-bold"
+              className="col-12 inp1 px-5 fw-bold form-control"
               id="username"
               name="fullName"
               value={formik.values.fullName}
               onChange={formik.handleChange}
             />
           </div>
-          <div className="position-relative col-12 col-lg-9 mt-3 m-auto">
+          <div className="position-relative px-1 col-12 col-lg-9 mt-3 m-auto">
             <FaRegEnvelope
               className={
                 i18n.language === "en"
-                  ? "en-2 fs-3 position-absolute inp-name"
-                  : "ar-2 fs-3 position-absolute inp-name"
+                  ? "en-2 fs-3 position-absolute inp-name1"
+                  : "ar-2 fs-3 position-absolute inp-name1"
               }
             />
             <input
               type="email"
               placeholder={t("email")}
-              className="col-12 inp1 px-5 fw-bold"
+              className="col-12 inp1 px-5 fw-bold form-control"
               name="email"
               value={formik.values.email}
               onChange={formik.handleChange}
             />
           </div>
-          <div className="position-relative col-12 col-lg-9 mt-3 m-auto">
+          <div className="position-relative px-1 col-12 col-lg-9 mt-3 m-auto">
             <RiLock2Line
               className={
                 i18n.language === "en"
-                  ? "en-2 fs-3 position-absolute inp-name"
-                  : "ar-2 fs-3 position-absolute inp-name"
+                  ? "en-2 fs-3 position-absolute inp-name1"
+                  : "ar-2 fs-3 position-absolute inp-name1"
               }
             />
             <input
               type={password ? "text" : "password"}
               placeholder={t("password")}
-              className="col-12 inp1 px-5 fw-bold"
+              className="col-12 inp1 px-5 fw-bold form-control"
               id="password"
               name="password"
               value={formik.values.password}
@@ -146,18 +146,18 @@ const Register = () => {
               )}
             </span>
           </div>
-          <div className="position-relative col-12 col-lg-9 mt-3 m-auto">
+          <div className="position-relative px-1 col-12 col-lg-9 mt-3 m-auto">
             <RiLock2Line
               className={
                 i18n.language === "en"
-                  ? "en-2 fs-3 position-absolute inp-name"
-                  : "ar-2 fs-3 position-absolute inp-name"
+                  ? "en-2 fs-3 position-absolute inp-name1"
+                  : "ar-2 fs-3 position-absolute inp-name1"
               }
             />
             <input
               type={confirmPassword ? "text" : "password"}
               placeholder={t("CPassword")}
-              className="col-12 inp1 px-5 fw-bold"
+              className="col-12 inp1 px-5 fw-bold form-control"
               id="confirm"
               name="confirmPassword"
               value={formik.values.confirmPassword}
@@ -179,13 +179,15 @@ const Register = () => {
               )}
             </span>
           </div>
-          <button
-            type="submit"
-            className="col-12 col-lg-9 inp2 mt-3 fs-5 fw-bold"
-            id="sign_up"
-          >
-            {t("signUp")}
-          </button>
+          <div className="px-1">
+            <button
+              type="submit"
+              className="col-12 col-lg-9 inp2 mt-3 fs-5 fw-bold"
+              id="sign_up"
+            >
+              {t("signUp")}
+            </button>
+          </div>
         </form>
         <h6 className="mt-4 fs-6 h61">
           {t("have")}

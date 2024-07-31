@@ -75,36 +75,36 @@ const Login = () => {
         <h5 className="mt-1 h51 fs-6" style={{ fontWeight: "400" }}>
           {t("signTo")}
         </h5>
-        <div className="position-relative col-12 col-lg-9 mt-5 m-auto">
+        <div className="position-relative px-1 col-12 col-lg-9 mt-5 m-auto">
           <FaRegEnvelope
             className={
               i18n.language === "en"
-                ? "en-2 fs-3 inp-name"
-                : "ar-2 fs-3 inp-name"
+                ? "en-2 fs-3 inp-name1"
+                : "ar-2 fs-3 inp-name1"
             }
           />
           <input
             type="email"
             placeholder={t("email")}
-            className="col-12 inp1 px-5 fw-bold"
+            className="col-12 inp1 form-control px-5 fw-bold"
             id="email"
             name="email"
             value={formik.values.email}
             onChange={formik.handleChange}
           />
         </div>
-        <div className="position-relative col-12 col-lg-9 mt-3 m-auto">
+        <div className="position-relative px-1 col-12 col-lg-9 mt-3 m-auto">
           <RiLock2Line
             className={
               i18n.language === "en"
-                ? "en-2 fs-3 inp-name"
-                : "ar-2 fs-3 inp-name"
+                ? "en-2 fs-3 inp-name1"
+                : "ar-2 fs-3 inp-name1"
             }
           />
           <input
             type={password ? "text" : "password"}
             placeholder={t("password")}
-            className="col-12 inp1 px-5 fw-bold"
+            className="col-12 inp1 px-5 form-control fw-bold"
             id="password"
             name="password"
             value={formik.values.password}
@@ -126,13 +126,15 @@ const Login = () => {
             )}
           </span>
         </div>
-        <button
-          type="submit"
-          className="col-12 col-lg-9 inp2 mt-3 fs-5 fw-bold"
-          id="sign_in"
-        >
-          {t("signIn")}
-        </button>
+        <div className="px-1">
+          <button
+            type="submit"
+            className="col-12 col-lg-9 inp2 mt-3 fs-5 fw-bold"
+            id="sign_in"
+          >
+            {t("signIn")}
+          </button>
+        </div>
       </form>
       <div className="m-auto col-7 text-center">
         <h6 className="mt-4 fs-6 h61">
