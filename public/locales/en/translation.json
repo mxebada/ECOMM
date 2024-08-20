@@ -80,5 +80,8 @@
   "save": "Save this credit card",
   "confirm": "Confirm",
   "success": "Success",
-  "complete": "Complete"
+  "complete": "Complete",
+  "setting": "Your profile settings",
+  "change": "Change My Profile Picture",
+  "saveSet": "Save Changes"
 }

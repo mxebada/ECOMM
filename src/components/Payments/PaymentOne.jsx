@@ -47,7 +47,6 @@ const PaymentOne = () => {
   const [over, SetOver] = useState(
     window.innerWidth < 1200 ? "auto" : "hidden"
   );
-  console.log(over);
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 1200) {
@@ -56,7 +55,7 @@ const PaymentOne = () => {
         SetOver("hidden");
       }
     };
-    
+
     window.addEventListener("resize", handleResize);
 
     return () => {
@@ -110,7 +109,7 @@ const PaymentOne = () => {
                 </div>
                 <div className="text-center my-2">
                   <h1 style={{ fontSize: "32px", color: "#40BFFF" }}>
-                    Make Payment
+                    {t("make")}
                   </h1>
                 </div>
               </div>
@@ -174,13 +173,13 @@ const PaymentOne = () => {
                     <div className="col-12 col-lg-6 px-0 px-lg-4">
                       <input
                         type="text"
-                        placeholder="First Name"
+                        placeholder={t("first")}
                         style={{ color: "#999999" }}
                         className="col-12 border-0 bg-inp px-3 py-2 rounded "
                       />
                       <input
                         type="text"
-                        placeholder="Email Address"
+                        placeholder={t("emailadd")}
                         style={{ color: "#999999" }}
                         className="col-12 border-0 px-3 bg-inp py-2 rounded my-4"
                       />
@@ -199,7 +198,7 @@ const PaymentOne = () => {
                               className="fs-6 ms-2"
                               style={{ color: "#223263" }}
                             >
-                              Credit Card Or Debit
+                              {t("credit")}
                             </h3>
                           </div>
 
@@ -228,7 +227,7 @@ const PaymentOne = () => {
                               className="fs-6 ms-2"
                               style={{ color: "#223263" }}
                             >
-                              Paypal
+                              {t("paypal")}
                             </h3>
                           </div>
 
@@ -253,7 +252,7 @@ const PaymentOne = () => {
                               className="fs-6 ms-2"
                               style={{ color: "#223263" }}
                             >
-                              Bank Transfer
+                              {t("bank")}
                             </h3>
                           </div>
 
@@ -274,7 +273,7 @@ const PaymentOne = () => {
                     <div className="col-12 col-lg-6 ps-0 ps-lg-4 mt-3 mt-lg-0">
                       <input
                         type="text"
-                        placeholder="Last Name"
+                        placeholder={t("last")}
                         style={{ color: "#999999" }}
                         className="col-12 border-0 px-3 bg-inp py-2 rounded "
                       />
@@ -283,11 +282,11 @@ const PaymentOne = () => {
                         className="col-12 border-0 px-3 py-2 rounded my-4 bg-inp"
                         style={{ color: "#999999" }}
                         rows={5}
-                        placeholder="Address for Delivery"
+                        placeholder={t("address")}
                       />
                       <input
                         type="text"
-                        placeholder="Mobile Phone"
+                        placeholder={t("mobile")}
                         style={{ color: "#999999" }}
                         className="col-12 border-0 bg-inp px-3 py-2 rounded "
                       />
@@ -298,7 +297,7 @@ const PaymentOne = () => {
                       className="col-12 col-lg-4 rounded py-2 check-out"
                       onClick={handleNext}
                     >
-                      Go to Payment
+                      {t("go")}
                     </button>
                   </div>
                 </div>
@@ -364,7 +363,7 @@ const PaymentOne = () => {
                       className="col-12 col-sm-9 col-lg-4 m-auto rounded py-2 check-out"
                       onClick={handleNext}
                     >
-                      Confirm
+                      {t("confirm")}
                     </button>
                   </div>
                 </div>
@@ -439,7 +438,7 @@ const PaymentOne = () => {
                   </div>
                   <div className="col-12 d-flex justify-content-center my-5">
                     <h3 style={{ color: "#223263", fontWeight: "700" }}>
-                      Success
+                      {t("success")}
                     </h3>
                   </div>
                   <div className="col-12 d-flex mt-3 justify-content-center">
@@ -447,7 +446,7 @@ const PaymentOne = () => {
                       className="col-8 col-lg-4 m-auto rounded py-2 check-out"
                       onClick={handleComplete}
                     >
-                      Complete
+                      {t("complete")}
                     </button>
                   </div>
                 </>

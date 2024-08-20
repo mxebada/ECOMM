@@ -6,6 +6,7 @@ import { RiLock2Line } from "react-icons/ri";
 import def from "../assets/u.jpg";
 import { errorMsg, successMsg } from "../components/Toast/Toast";
 import { updateUser } from "../redux/reducers/user";
+import { useTranslation } from "react-i18next";
 
 const Profile = () => {
   const dispatch = useDispatch();
@@ -14,6 +15,7 @@ const Profile = () => {
   const [image, setImage] = useState(null);
   const imageInput = useRef();
 
+  const { t } = useTranslation()
   function imageUpload() {
     imageInput.current.click();
   }
@@ -56,9 +58,9 @@ const Profile = () => {
         }}
         onSubmit={formik.handleSubmit}
       >
-        <div className="row mt-5">
+        <div className="row mt-lg-5">
           <div className="col-12 text-center my-3">
-            <h1 className="fw-bold ">Your Profile</h1>
+            <h1 className="fw-bold ">{t("setting")}</h1>
           </div>
           <div className="col-12 d-flex justify-content-between flex-wrap mt-3">
             <div className="col-lg-4 col-11 col-sm-offset-1">
@@ -71,7 +73,7 @@ const Profile = () => {
                   className="border rounded-circle mt-4"
                 />
                 <p className="fw-bold" style={{ marginTop: "20px" }}>
-                  <span
+                  <p
                     htmlFor="personalPhoto"
                     id="fileLink"
                     className="mt-2 inp4"
@@ -82,8 +84,8 @@ const Profile = () => {
                     }}
                     onClick={imageUpload}
                   >
-                    Change My Profile Picture
-                  </span>
+                    {t("change")}
+                  </p>
                   <input
                     onChange={imageDisplay}
                     type="file"
@@ -94,10 +96,10 @@ const Profile = () => {
                 </p>
               </div>
             </div>
-            <div className="col-lg-6 col-11">
+            <div className="col-lg-6 col-11 mt-5 mt-lg-0">
               <div className="form-group">
                 <label className="fw-bold my-2">
-                  Full Name <span style={{ color: "#FA0000" }}>*</span>
+                  {t("fullName")} <span style={{ color: "#FA0000" }}>*</span>
                 </label>
                 <div className="position-relative">
                   <FaUser className="fs-5 position-absolute inp-name" />
@@ -105,7 +107,7 @@ const Profile = () => {
                     name="fullName"
                     type="text"
                     className="form-control py-2 ps-5 fw-bold"
-                    placeholder="Full Name"
+                    placeholder={t("fullName")}
                     style={{ color: "#9098b1", border: "1px solid #9098b1" }}
                     value={formik.values.fullName}
                     onChange={formik.handleChange}
@@ -114,7 +116,7 @@ const Profile = () => {
               </div>
               <div className="form-group mt-lg-3">
                 <label className="fw-bold my-2">
-                  Email <span style={{ color: "#FA0000" }}>*</span>
+                  {t("email")} <span style={{ color: "#FA0000" }}>*</span>
                 </label>
                 <div className="position-relative">
                   <FaEnvelope className="fs-5 position-absolute inp-name" />
@@ -122,17 +124,16 @@ const Profile = () => {
                     name="email"
                     type="email"
                     className="form-control py-2 ps-5 fw-bold"
-                    placeholder="Email"
+                    placeholder={t("email")}
                     style={{ color: "#9098b1", border: "1px solid #9098b1" }}
                     value={formik.values.email}
                     onChange={formik.handleChange}
-                    disabled
                   />
                 </div>
               </div>
               <div className="form-group mt-lg-3">
                 <label className="fw-bold my-2">
-                  Password <span style={{ color: "#FA0000" }}>*</span>
+                  {t("password")} <span style={{ color: "#FA0000" }}>*</span>
                 </label>
                 <div className="position-relative">
                   <RiLock2Line className="fs-5 position-absolute inp-name" />
@@ -140,7 +141,7 @@ const Profile = () => {
                     name="password"
                     type="password"
                     className="form-control py-2 ps-5 fw-bold"
-                    placeholder="Password"
+                    placeholder={t("password")}
                     style={{ color: "#9098b1", border: "1px solid #9098b1" }}
                     value={formik.values.password}
                     onChange={formik.handleChange}
@@ -149,7 +150,7 @@ const Profile = () => {
               </div>
               <div className="form-group mt-lg-3">
                 <label className="fw-bold my-2">
-                  Confirm Password <span style={{ color: "#FA0000" }}>*</span>
+                  {t("CPassword")} <span style={{ color: "#FA0000" }}>*</span>
                 </label>
                 <div className="position-relative">
                   <RiLock2Line className="fs-5 position-absolute inp-name" />
@@ -157,7 +158,7 @@ const Profile = () => {
                     name="confirmPassword"
                     type="password"
                     className="form-control py-2 ps-5  fw-bold"
-                    placeholder="Confirm Password"
+                    placeholder={t("CPassword")}
                     style={{ color: "#9098b1", border: "1px solid #9098b1" }}
                     value={formik.values.confirmPassword}
                     onChange={formik.handleChange}
@@ -167,9 +168,9 @@ const Profile = () => {
               <div className="col-12 d-flex justify-content-lg-end mt-4">
                 <button
                   type="submit"
-                  className="col-12 col-lg-3 m-auto m-lg-0 fw-medium rounded py-2 px-4 inp4"
+                  className="col-12 col-lg-6 m-auto m-lg-0 fw-medium rounded py-2 px-4 inp4"
                 >
-                  Save Changes
+                  {t("saveSet")}
                 </button>
               </div>
             </div>

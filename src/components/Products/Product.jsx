@@ -3,9 +3,25 @@ import { FaRegHeart, FaSearch } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart, removeFromCart } from "../../redux/reducers/cart";
 
 const Product = (props) => {
+  const dispatch = useDispatch();
+
+  const handleAddToCart = () => {
+    const product = {
+      id: props.id,
+      title: props.title,
+      price: props.price,
+      offer: props.offer,
+      oldPrice: props.oldPrice,
+      image: props.image,
+    };
+
+    dispatch(addToCart(product));
+
+  };
 
   const online = useSelector((state)=>state.user.online)
   return (
@@ -40,7 +56,7 @@ const Product = (props) => {
           <div className="d-flex justify-content-around m-auto p-5 col-12">
         {online && <button
               className="icon-s fs-4 fw-bold d-flex justify-content-center align-items-center"
-              onClick={() => addToCart(props.id)}
+              onClick={handleAddToCart}
             >
               <IoCartOutline />
             </button>}

@@ -1,12 +1,14 @@
 import React from "react";
 import ProductInCart from "../components/Products/ProductInCart";
 import PaymentOne from "../components/Payments/PaymentOne";
-import { PRODUCTS } from "../data/products";
 import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
 
 export const Cart = () => {
   const { t } = useTranslation();
+  const cartItems = useSelector(state => state.cart.items);
 
+  console.log(cartItems);
   return (
     <div>
       <div className="d-md-none cart-line pt-3 pb-4">
@@ -34,23 +36,10 @@ export const Cart = () => {
            <h1>{t("empty")}</h1>
          </div> */}
 
-      {/* {PRODUCTS.map((item) => {
-        if (cartItems[item.id] !== 0) {
-          return (
-            <ProductInCart
-              id={item.id}
-              title={item.title}
-              price={item.price}
-              offer={item.offer}
-              oldPrice={item.oldPrice}
-              image={item.image}
-            />
-          );
-        }
-      })} */}
-      {PRODUCTS.map((item) => {
+      {cartItems.map((item) => {
         return (
-          <ProductInCart
+       <div key={item.id}>
+           <ProductInCart
             id={item.id}
             title={item.title}
             price={item.price}
@@ -58,6 +47,7 @@ export const Cart = () => {
             oldPrice={item.oldPrice}
             image={item.image}
           />
+       </div>
         );
       })}
 
