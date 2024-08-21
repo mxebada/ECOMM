@@ -44,7 +44,7 @@ const Login = () => {
     dispatch(login(user));
     setTimeout(() => {
       navigate("/");
-    }, 500);
+    }, 200);
   };
 
   const formik = useFormik({

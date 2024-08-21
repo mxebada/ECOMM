@@ -5,12 +5,12 @@ import { addToCart, removeFromCart, removeProduct } from "../../redux/reducers/c
 
 const ProductInCart = (props) => {
   const dispatch = useDispatch();
-  
+
   // Get the product quantity from the Redux store
   const product = useSelector(state =>
     state.cart.items.find(item => item.id === props.id)
   );
-  
+
   const quantity = product ? product.quantity : 0;
 
   return (

@@ -42,7 +42,7 @@ const Register = () => {
 
     setTimeout(() => {
       navigate("/login");
-    }, 1000);
+    }, 200);
   };
 
   const formik = useFormik({

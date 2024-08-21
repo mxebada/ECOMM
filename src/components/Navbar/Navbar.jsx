@@ -7,6 +7,7 @@ import LanguageSelector from "./language-selector";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../redux/reducers/user";
+import { clearCart, selectTotalItems } from "../../redux/reducers/cart";
 
 const Navbar = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
@@ -15,9 +16,19 @@ const Navbar = () => {
   const { i18n } = useTranslation();
   const online = useSelector((state) => state.user.online);
   const user = useSelector((state) => state.user.user);
+  const users = useSelector((state) => state.user.users)
+
+  console.log(users);
+  let totalItems = useSelector(selectTotalItems)
 
   const handleProfile = () => {
     setIsProfileOpen(!isProfileOpen);
+  };
+
+  const handleSignIn = () => {
+
+    dispatch(logout()) //logout
+    dispatch(clearCart()); // Clear the cart for the new user
   };
 
   return (
@@ -50,7 +61,7 @@ const Navbar = () => {
         </Link>
         <div className="col-3 col-lg-5 d-flex align-items-center justify-content-end">
           <Link to="/cart" className="mx-4 position-relative">
-            <span
+            {totalItems > 0 && users.length > 0 && <span
               className="d-block position-absolute rounded-circle text-center text-white"
               style={{
                 width: "19px",
@@ -63,8 +74,8 @@ const Navbar = () => {
                 cursor: "pointer",
               }}
             >
-              5
-            </span>
+              {totalItems}
+            </span>}
             <GrCart className="fs-4 text-black" style={{ cursor: "pointer" }} />
           </Link>
 
@@ -95,7 +106,7 @@ const Navbar = () => {
                   <Link
                     to="/"
                     className="py-2 px-4 rounded-3 inp3 fw-bold col-12 mb-3 d-block text-center text-decoration-none"
-                    onClick={() => dispatch(logout())}
+                    onClick={handleSignIn}
                   >
                     {t("logout")}
                   </Link>

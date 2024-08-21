@@ -18,6 +18,8 @@ const saveState = (state) => {
     console.warn("Could not save state to localStorage", e);
   }
 };
+export const selectTotalItems = (state) =>
+  state.cart.items.reduce((total, item) => total + item.quantity, 0);
 
 const initialState = {
   items: loadState(), // Load initial state from localStorage
@@ -28,7 +30,9 @@ export const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
-      const existingProduct = state.items.find(item => item.id === action.payload.id);
+      const existingProduct = state.items.find(
+        (item) => item.id === action.payload.id
+      );
       if (existingProduct) {
         existingProduct.quantity += 1;
       } else {
@@ -37,23 +41,30 @@ export const cartSlice = createSlice({
       saveState(state.items); // Save the updated state to localStorage
     },
     removeFromCart: (state, action) => {
-      const product = state.items.find(item => item.id === action.payload);
+      const product = state.items.find((item) => item.id === action.payload);
       if (product) {
         if (product.quantity > 1) {
           product.quantity -= 1;
         } else {
-          state.items = state.items.filter(item => item.id !== action.payload);
+          state.items = state.items.filter(
+            (item) => item.id !== action.payload
+          );
         }
         saveState(state.items); // Save the updated state to localStorage
       }
     },
     removeProduct: (state, action) => {
-      state.items = state.items.filter(item => item.id !== action.payload);
+      state.items = state.items.filter((item) => item.id !== action.payload);
       saveState(state.items); // Save the updated state to localStorage
+    },
+    clearCart: (state) => {
+      state.items = [];
+      saveState(state.items); // Clear the cart in localStorage
     },
   },
 });
 
-export const { addToCart, removeFromCart, removeProduct } = cartSlice.actions;
+export const { addToCart, removeFromCart, removeProduct, clearCart } =
+  cartSlice.actions;
 
 export default cartSlice.reducer;

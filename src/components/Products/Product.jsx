@@ -1,10 +1,10 @@
 import React from "react";
-import { FaRegHeart, FaSearch } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart, removeFromCart } from "../../redux/reducers/cart";
+import { addToCart } from "../../redux/reducers/cart";
 
 const Product = (props) => {
   const dispatch = useDispatch();
@@ -20,10 +20,9 @@ const Product = (props) => {
     };
 
     dispatch(addToCart(product));
-
   };
 
-  const online = useSelector((state)=>state.user.online)
+  const online = useSelector((state) => state.user.online)
   return (
     <div>
       <div className="col-11 m-auto text-center rounded-3 pb-3 mt-4 section3-content-div">
@@ -54,7 +53,7 @@ const Product = (props) => {
 
         <div className="overlay mt-2 rounded-4 col-12 pt-5 pb-4">
           <div className="d-flex justify-content-around m-auto p-5 col-12">
-        {online && <button
+            {online && <button
               className="icon-s fs-4 fw-bold d-flex justify-content-center align-items-center"
               onClick={handleAddToCart}
             >
