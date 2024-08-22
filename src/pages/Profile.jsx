@@ -169,6 +169,7 @@ const Profile = () => {
                 <button
                   type="submit"
                   className="col-12 col-lg-6 m-auto m-lg-0 fw-medium rounded py-2 px-4 inp4"
+                  style={{transform:"none"}}
                 >
                   {t("saveSet")}
                 </button>

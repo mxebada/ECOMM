@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 import { errorMsg, successMsg } from "../components/Toast/Toast";
 import { login } from "../redux/reducers/user";
+import { clearCart } from "../redux/reducers/cart";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -27,6 +28,9 @@ const Login = () => {
   };
 
   const handleSubmit = ({ email, password }) => {
+    if (email == "" || password == "") {
+      return errorMsg("Please Fill Data !!")
+    }
     const user = users.find((ele) => ele.email === email);
 
     if (!user) {
@@ -42,6 +46,7 @@ const Login = () => {
     successMsg(`Welcome ${user?.fullName}`);
 
     dispatch(login(user));
+    dispatch(clearCart()); // Clear the cart for the new user
     setTimeout(() => {
       navigate("/");
     }, 200);

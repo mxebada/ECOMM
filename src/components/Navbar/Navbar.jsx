@@ -18,7 +18,6 @@ const Navbar = () => {
   const user = useSelector((state) => state.user.user);
   const users = useSelector((state) => state.user.users)
 
-  console.log(users);
   let totalItems = useSelector(selectTotalItems)
 
   const handleProfile = () => {

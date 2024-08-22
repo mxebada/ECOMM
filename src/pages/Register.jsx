@@ -28,6 +28,10 @@ const Register = () => {
   };
 
   const handleSubmit = (values) => {
+    if (values.fullName == "" || values.email == "" || values.password == "" || values.confirmPassword == "") {
+      return errorMsg("Please Fill Data !!")
+    }
+
     if (values.password !== values.confirmPassword) {
       return errorMsg("Password doesn't Match !!!");
     }

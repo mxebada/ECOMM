@@ -47,21 +47,6 @@
   color: #9098b1;
   font-weight: 400;
 }
-.inp2 {
-  height: 55px;
-  border-radius: 5px;
-  background-color: #40bfff;
-  border: 1px solid #40bfff;
-  color: white;
-  transition: 0.5s;
-}
-.inp2:hover {
-  background-color: white;
-  color: #40bfff;
-  border: 1px solid #40bfff;
-  transition: 0.5s;
-}
-
 .inp3 {
   background-color: #40bfff;
   color: white;
@@ -386,4 +371,58 @@
   .img {
     background-size: 100vw 100vh;
   }
+}
+
+/* CSS Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.cart-item {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.total-section {
+  animation: slideInRight 0.7s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+button {
+  transition: transform 0.2s ease-in-out;
+}
+.inp2 {
+  height: 55px;
+  border-radius: 5px;
+  background-color: #40bfff;
+  border: 1px solid #40bfff;
+  color: white;
+  transition: 0.5s;
+  transform: none;
+}
+.inp2:hover {
+  background-color: white;
+  color: #40bfff;
+  border: 1px solid #40bfff;
+  transition: 0.5s;
+  transform: none;
 }
